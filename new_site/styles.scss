@@ -1,0 +1,50 @@
+@import "partials/_variables.scss";
+
+/* ------------- Base Setup Styles -------------- */
+body {  position: relative; background-color: #fff; color: $text;  font: 400 17px/1.2 $font; counter-reset: section; overflow-x: hidden;  }
+p {color: $text; font: 400 18px/1.666 $font; }
+a {cursor: pointer; text-decoration: none; color: $primary; } a:hover { color: $secondary;}
+hr {position: relative; display: table; clear: both; margin: 40px auto; width: 100%; height: 1px; background-color: $secondary;}
+*:focus, a:focus, button:focus, input:focus {outline-width: medium; outline-color: $primary!important;}
+
+
+/* ------------- Text Styles -------------- */
+h1, h2, h3, h4, h5, h6 {margin: 0; position: relative;}
+#page-title h1, .h1 small { color: $text; font: 400 16px/1 $font; display: block; margin: 10px auto; text-transform: uppercase; }
+#page-title h1:only-child, h2#append, .h1 {color: $text; font: 700 38px/1 $font2; }
+h2, .h2, .dividerLead, .more-to-explore span {color: $text; font: 700 35px/1 $font2; position: relative;}
+h3, .h3 {color: $text; display: block; position: relative; font: 400 30px/1.1 $font2; text-transform: uppercase;  }
+.h4, .toggle h2, .toggle h3 {color: $text; display: block; position: relative; font: 400 24px/1.25 $font;  }
+.more-to-explore span {color: #fff; }
+.fo-title {color: $primary; font: 700 16px/1 $font2; display: block;  text-transform: uppercase;}
+// .accent:after {display: table; content: ''; width: 25px; height: 3px; background-color: $secondary; margin: 10px auto 20px;}
+
+
+/* ------------- Buttons -------------- */
+[class^="btn"] {position: relative; z-index: 1; display:inline-block; vertical-align: middle; cursor: pointer; text-align: center; transition: .3s all; font: 400 16px/1.2 $font; color: #fff; text-transform: uppercase;  min-width: 285px; margin: 10px; padding: 10px;  background-color: $primary; 
+    &:hover {background-color: $secondary; color: #fff; }
+}
+
+.btn-alt { background-color: $secondary;  color: #fff;
+    &:hover {background-color: $tertiary; color: #fff;}
+}
+
+.btn-thr {background-color: $tertiary;  
+    &:hover {background-color: $primary;}
+}
+
+
+
+@import "partials/_header.scss";
+@import "partials/_custom-video.scss";
+@import "partials/_home.scss";
+
+@import "partials/_footer.scss";
+@import "partials/_galleries.scss";
+@import "partials/_service-pages.scss";
+@import "partials/_internal.scss";
+@import "partials/_fixed-tabs.scss";
+@import "partials/_media-queries.scss";
+@import "partials/_media-queries-sm.scss";
+
+/*end */

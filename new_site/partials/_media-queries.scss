@@ -1,0 +1,56 @@
+
+@media (max-width: 1290px) {
+
+}
+
+@media (max-width: 1080px) {
+
+}
+
+@media (max-width:1000px) {
+
+
+/* ------------- HOME 1000 -------------- */
+    .split {
+        .flex-ed {display: block; text-align: center;}
+        figure {display: block; margin: auto;}
+        article {margin: 20px auto;}
+    }
+
+    #reviews .slick-arrow {position: relative; left: auto; right: auto; top: auto; transform: none;}
+
+
+/* ------------- FOOTER 1000 -------------- */
+    #fo-contents {flex-wrap: wrap; text-align: center;}
+    footer .hours {margin: 20px auto; }
+    .fo-title {text-align: center;}
+
+
+
+/* ------------- INTRO 1000 -------------- */
+#interior-banner {
+    .flex-title {
+        .contain {max-width: 100%;;}
+    }
+}
+    .flex-title {display: block; text-align: center;
+        #page-title {text-align: center;}
+    }
+    #main-img {min-height: auto; img {display: block; width: 100%}}
+    #intro {  margin: 20px auto;}
+
+
+
+/* ------------- INTERNAL  1000 -------------- */
+    .block {    text-align: center; padding: 40px 10px;
+        .contain {display: block;}
+        .btn {margin: 10px auto;}
+        h2, h3 { margin-bottom: 20px; text-align: center;}
+        [class^="elem"]   {float: none; margin: 10px auto 20px;  max-width: 100%;}
+        ul {display: table; margin: 20px auto;}
+    }
+    .services > div, #all {flex: 0 1 48%;}
+    [data-player][class^="elem"]{max-width: 650px;}
+
+
+}

@@ -1,0 +1,35 @@
+/* --- fixed-tabs --- */
+
+#fixed-tabs {position: fixed; right: 0; text-align: center; line-height: 1; font-size: 0;z-index:200; padding: 0;
+    li {flex: 1;}
+    a {display: block; font-size: 14px; font-weight: 700; color: #fff; position: relative; overflow: hidden;}
+    i {font-size: 16px} #fixed-tabs i, #fixed-tabs i:before { display: block; margin: 0 auto!important}
+    .ra { background-color: darken($primary, 10%);}
+    .call {background-color: darken($secondary, 10%);}
+    .map, .fr {background-color: $text;}
+    .fb {background-color: $facebook;}
+    .gg {background-color: $google;}
+}
+
+@media (min-width:1025px) {
+    #fixed-tabs { display: none;  }
+}
+
+@media (max-width: 1024px) {
+    #fixed-tabs { bottom: 0; width: 100%; display: -webkit-box; display: -ms-flexbox; display: flex;
+        a {padding: 12px 0; -webkit-box-flex: 1; -ms-flex: 1; flex: 1;
+            span {display: inline-block; vertical-align: middle;}
+        }
+        .call, .map {display: none}
+    }
+}
+@media (max-width: 1000px) {
+  #fixed-tabs {
+     .fr, .gg, .fb {display: none;}
+     .call, .map {display: block}
+  }
+}
+    @media (max-width: 730px) {
+        #fixed-tabs .ra strong {display: none}
+        #fixed-tabs .ra {-webkit-box-flex: 2;-ms-flex: 2;flex: 2}
+    }

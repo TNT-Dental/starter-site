@@ -1,0 +1,70 @@
+
+#find {margin: 50px auto;}
+#map {position: relative; margin: 0; flex: 0 1 50%;
+    iframe {height: 100%; width: 100%; border: none; display: block; }
+}
+#quest { padding: 10px; flex: 0 1 50%; text-align: center;
+    form {  max-width: 480px; margin: 20px auto;}
+    textarea {height: 125px;}
+}
+
+#assoc {
+    .flex-row {max-width: 1400px; margin: auto;}
+    span {padding: 8px;}
+}
+
+/* --------------- Simple Form ---------------- */
+.simple {line-height: 1; font-size: 0; margin: 0 auto; text-align: center;
+    input, textarea  {-webkit-box-sizing: border-box!important;box-sizing: border-box!important; border: 0; border-radius: 0; line-height: 1; font-size: 18px; width:100%; max-width: 100%; padding: 0 11px; margin-bottom: 10px; height: 45px; color: $primary; background-color: #eee; }
+    textarea {height: 130px; padding: 14px 11px;}
+    input:focus, textarea:focus {outline: 0; background-color: #e7f0f6; color: $primary;}
+}
+::placeholder {color: $text}
+::-webkit-input-placeholder {color: $text }
+
+
+/* -------------- Social Links ------------- */
+.social {font-size: 0; text-align: center; margin: 10px auto; display: flex; justify-content: space-around;
+    a {position: relative; display: inline-block; margin: 5px; font-size: 16px; color: #fff; width: 40px; height: 40px; border-radius: 50%;line-height: 40px;  }
+
+    .fb{background-color: $facebook;}
+    .gp{background-color: $google;}
+    .yp{background-color: $yelp;}
+    .yt{background-color: $youtube;}
+    .in{background-color: $instagram;}
+    .tw {background-color: $twitter;}
+    .hl {background-color: $healthcare;}
+    a:hover {background-color: #fff;}
+    .fb:hover i{color: $facebook;}
+    .gp:hover i{color: $google;}
+    .yp:hover i{color: $yelp}
+    .yt:hover i{color: $youtube;}
+    .in:hover i{color: $instagram;}
+    .tw:hover i{color: $twitter;}
+    .hl:hover i{color: $healthcare;}
+}
+
+
+/* ------------- Footer ------------- */
+
+footer { background-color: #16191a; color: #fff;
+    a {color: #fff; &:hover {color:  $secondary;} }
+    .logo {display: block; margin-bottom: 10px;}
+    .pho {  font: 700 24px/1.2 $font; margin: 10px auto; display: block; }
+    .phy { font: 700 24px/1.2 $font; margin: 20px auto; display: block;}
+    .hours {margin: 20px 0;}
+    .hours p{color: #fff; }
+    .social {display: table; a:first-of-type {margin-left: 0;}}
+}
+
+#fo-contents {display: flex; justify-content: space-around;  margin: auto; position: relative; max-width: 1350px; padding: 50px 10px; }
+.fo-info {flex: 0 1 auto;}
+
+#copy { font: 400 15px/1.5 $font; color: $text;  padding: 20px 0; text-align: center;
+    a {color: $text;
+        &:nth-of-type(1), &:nth-of-type(2) {color:  $secondary; }
+        &:hover  {color: $primary;}
+    }
+    span:nth-of-type(odd) {visibility: hidden;}
+    img {display: inline-block; vertical-align: middle;}
+}

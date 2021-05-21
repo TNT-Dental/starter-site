@@ -1,0 +1,128 @@
+/* ------------- Page Foundation -------------- */
+
+#page {position: relative; display: block; width: 100%; margin: auto; padding: 30px 10px; max-width: 1280px; clear: both;}
+#page.has_divider {padding-bottom: 0;}
+.page_index .internal {display: none;}
+.center {text-align: center;}
+main {overflow: hidden}
+main ul {list-style: none;  padding: 0; margin: 10px 0; text-align: left; overflow: hidden;
+    li {position: relative; display: block; margin: 0 0 10px 26px; padding-left: 24px; line-height: 1.6; overflow: hidden;}
+    li:before {content: '\e832'; color: $primary; position: absolute; left: 0; top: 0; font-size:.9em;}
+}
+@media (min-width:800px) {
+    ul.two {-webkit-column-count: 2;column-count: 2;}
+}
+@media (max-width:750px) {
+    main ul li {margin-left: 10px}
+    .elem-left, .elem-right, .block .elem-left, .block .elem-right {display: table; float:none; margin:20px auto; max-width:100%;}
+}
+
+
+/* ------------- Internal Title -------------- */
+#interior-banner {  display: flex; flex-direction: column; justify-content: center; position: relative; text-align: center;
+    .contain {max-width: 1200px; margin: auto; width: 100%; flex: 0 1 50%; padding: 50px 20px; }
+    background: rgba(0,0,0,0.1);
+    .flex-title {text-align: left; max-width: 1500px; margin: auto;
+        .contain {max-width: 45%; margin: auto;}
+    }
+}
+#page-title {  position: relative; margin: auto;}
+.flex-title {height: 100%;
+   
+    #page-title {text-align: left;  margin: auto;}
+}
+#intro {  margin: 0 auto; }
+#main-img {flex: 0 1 50%; align-self: stretch;min-height: 500px;
+    img {display: none;}
+}
+
+
+/* ------------- Landing -------------- */
+.landing {
+    display: flex; align-items: flex-start; justify-content: space-around; flex-wrap: wrap;
+    a {flex: 0 1 30%; margin: 10px auto 20px; text-align: center;
+        h3 {padding: 10px; background-color: $primary; color: #fff; font: 400 15px/1 $font2; text-transform: none; transition: .3s all;}
+        &:hover h3 {background-color: $secondary; color: #fff;}
+    }
+}
+
+
+/* ------------- Refer Form -------------- */
+#refer {background: $secondary; margin: 40px auto; max-width: 700px; padding: 40px 20px 30px;}
+#refer .simple {max-width: 650px; margin: auto;}
+
+
+
+/* ------------- FAQ -------------- */
+.accordion {margin: 20px auto; text-align: left;
+    .toggle {position: relative; cursor: pointer; clear: both;  padding: 10px 10px 10px 55px; margin: 7px auto 0;
+        width: 100%; display: block; text-align: left;
+        &:hover {
+            h2, h3 {color: $secondary}
+        }
+        &.active:before  {background-color: $secondary; content: 'A';}
+    }
+    .toggle:before{content: 'Q'; color: #fff;
+        font: 700 24px/1.5 $font; border-radius: 50%; position: absolute; top: 0; left: 0;  width: 48px;  height: 48px; background-color: $primary; box-shadow: inset 0 3px 8px rgba(0, 1, 1, 0.19); text-align: center; display: flex;align-items: center; justify-content: center;}
+    > div {display:none; padding:0 20px 20px 55px}
+}
+
+
+/* ------------- Contact -------------- */
+.hours {display: table; margin: 10px auto; text-align: left!important; 
+    label {width:120px; display: inline-block; font-weight: 700;}
+}
+
+.contact {display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; max-width: 1150px; margin: 30px auto;
+    h3 {margin: 10px auto;}
+    p {margin: 15px 0 10px; line-height: 1.4;}
+    > div:first-child {flex: 1 0 auto; margin-right: 20px;}
+    > div:last-child {margin-right: 10px;}
+}
+.contact-map {height: 380px; margin: 20px auto 40px;  iframe {height: 100%; width: 100%;}}
+
+
+/* ------------- APPT FORM -------------- */
+.styled-form { margin: 30px auto; font-size: 16px;text-align: left }
+.styled-form [class^="btn"] {margin-left: 0;}
+.styled-form .drei { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; -webkit-flex-flow: row wrap; -ms-flex-flow: row wrap; flex-flow: row wrap }
+.styled-form .drei+.drei { margin-top: 5px }
+.styled-form .input-content, .styled-form .inline { width: calc(100% / 3 - 5px); min-height: 60px }
+.styled-form .inline, .input-content { background-color: $text;}
+.input__label-content strong, .input__label-content strong a { color: #fff }
+.input-content, .styled-form .inline label, .styled-form .inline, .input--filled .input__label .input__label-content strong, .input--filled .input__label .input__label-content a { color: #fff !important }
+.styled-form .drei:first-of-type { line-height: 1 !important }
+.styled-form .inline { box-sizing: border-box; padding: 8px 16px }
+.styled-form .inline span input { margin-right: 4px }
+.styled-form .inline span { display: block; line-height: 1.4 }
+.styled-form .hear { margin: 5px 0 }
+.styled-form .hear label { display: inline-block; margin-right: 8px }
+.styled-form .inline.wide { width: calc(100% / 1.5 - 3px) }
+.input-content { position: relative; z-index: 1; overflow: hidden }
+.input__field { -webkit-appearance: none; position: absolute; z-index: 2; display: block; float: right; border: none; border-radius: 0; padding: 0 14px; margin-top: 1.2em; height: 40px; width: 100%; background: transparent; color: #fff }
+.input__field { outline: none }
+.styled-form *:focus {outline-color: $primary; outline-style: ridge; outline-width: thin;}
+.input__label { display: inline-block;  padding: 0; width: 100%; background: transparent; text-align: left; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; -webkit-touch-callout: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none }
+.input__label::before { content: ''; box-sizing: border-box; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0px solid transparent; -webkit-transition: border-width 0.3s, border-color 0.3s; transition: border-width 0.3s, border-color 0.3s }
+.input__label-content { box-sizing: border-box; position: relative; display: block; width: 100%; padding: 1.1em 1em; text-rendering: geometricPrecision; -webkit-transform-origin: 0% 50%; transform-origin: 0% 50%; -webkit-transition: -webkit-transform 0.3s, color 0.3s; -webkit-transition: color 0.3s, -webkit-transform 0.3s; transition: color 0.3s, -webkit-transform 0.3s; transition: transform 0.3s, color 0.3s; transition: transform 0.3s, color 0.3s, -webkit-transform 0.3s }
+.input__label-content strong { float: right; font-weight: 300 }
+.input__field+.input__label::before, .input--filled .input__label::before { border-width: .2em 0 0; border-color: $primary; border-top-width: 1.5em }
+.input__field+.input__label .input__label-content, .input--filled .input__label .input__label-content { color: #fff; font-size: 16px; padding: .85em .5em; -webkit-transform: translate3d(0, -0.65em, 0); transform: translate3d(0, -0.65em, 0) }
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill { background-color: transparent !important }
+.styled-form .inline textarea { padding: 5px; display: block; width: 100%; height: 80px; font-size: 16px; margin-top: 5px }
+.styled-form .inline textarea { color: #000; padding: 5px; display: block; width: 100%; height: 120px; font-size: 16px; margin-top: 5px }
+.styled-form .inline.wide { width: calc(100% / 1.5 - 3px) }
+@media (max-width:800px) {
+  .styled-form .input-content, .styled-form .inline { width: 100%; display: block; border-bottom: 1px solid rgba(206, 206, 206, 0.22) }
+  .styled-form .input-content+.input-content { margin-top: 5px }
+  .styled-form .inline.wide { width: 100%; margin-top: 5px }
+}
+.styled-form select {border: 1px solid $text; padding: 5px;}
+.options label {display: block; margin-bottom: 5px;}
+.options [type=checkbox], .options [type=radio] { -webkit-appearance: none;position: relative; background-color: #fff; padding: 9px; border-radius: 3px; vertical-align: middle; }
+.options [type=radio] {border-radius: 50%;}
+.options [type=checkbox]:active, .options [type=checkbox]:checked:active, .options [type=checkbox]:checked, 
+.options [type=radio]:active, .options [type=radio]:checked:active, .options [type=radio]:checked  { background-color: #fff; }
+.options [type=checkbox]:checked:after, .options [type=radio]:checked:after  {font-family: fontello; content: '\e832'; font-size: 13px; position: absolute; top: 2px; left: 2px; color: $primary;}
+.options [type=radio]:checked:after {  content: ''; width: 14px; height: 14px; background-color: $primary; border-radius: 50%;}  
+

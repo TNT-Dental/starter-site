@@ -1,0 +1,65 @@
+
+/* ------------------ Why ----------------- */
+.why {padding: 30px 10px 10px; position: relative;  counter-reset: why-section;
+    &:before {content: ''; position: absolute; left: -1000px; right: -1000px; top: 0; bottom: 0; background-color: $secondary; }
+    h2 {text-align: center; font-size: 30px; }
+    ul {display: flex; justify-content: space-around;  align-items: center; text-align: center;   align-items: flex-start;}
+    ul li { max-width: 280px;  flex: 1 1 33%; padding: 0; margin: 10px; width: 100%;  color: #fff; overflow: visible;
+        span {max-width: 95%; margin: 0 auto;}
+    }
+    ul li:before  { content: ''; counter-increment: why-section; content: counter(why-section); position: relative; display: flex; justify-content: center; align-items: center; margin: 0 auto 10px; width: 56px; height:54px; border-radius: 50%;  background-color: $primary;  color: #fff; font: 400 30px/1 $font; text-align: center; }
+}
+
+
+/* ------------- Page Divider -------------- */
+.page-divider {display: block; max-width: 100%; width: 100%; position: relative; z-index: 1; margin-top: 40px;}
+.block {position: relative; display: table; clear: both; width: 100%; max-width: 100%; padding: 60px 10px;
+    &:before {content: ''; position: absolute; left: -1000px; right: -1000px; top: 0; bottom: 0; z-index: -1;}
+    .contain { display: flex; justify-content: space-around; align-items: flex-start;}
+    h2 {margin-bottom: 20px;}
+    .wrap {height: 0;}
+    article { margin: auto; flex: 0 1 550px; }
+    article p:first-of-type {margin-top: 0;}
+    ul li{margin-left: 0;}
+    .btn {margin-left: 0;}
+    .elem {flex: 0 0 auto; position: relative; z-index:3}
+    .elem-right {order: 1;}
+}
+.block:nth-of-type(odd):before { background-color: #ededed; }
+
+.mini-block {display: table; clear: both; padding: 30px 0 0; margin-top: 30px; border-top: 1px solid #ededed }
+
+
+/* ------------- Meet Doctor Page -------------- */
+
+
+
+/* ------------- More to Explore -------------- */
+.more-to-explore { position: relative; text-align: center; margin: 0 auto; padding: 40px 10px 60px; background-color: $tertiary;
+    p {  padding: 10px; margin: auto; max-width: 1150px;  display: flex; align-items: center; flex-wrap: wrap; justify-content: center;}
+    [class^="btn"] {min-width: 350px; margin: 5px;}
+}
+
+
+/* ------------- Services -------------- */
+.services { max-width: 1180px; margin: 40px auto; align-items: stretch; flex-wrap: wrap; flex-wrap: wrap;
+    > div {flex: 0 1 32%;  padding: 0 15px; margin: 10px auto;}
+    h3 {display: block; text-align: center; line-height: 1.1; 
+        span {display: block; font-size: 18px; } 
+    }
+    figure {  transition: .4s all; img {width: 100%; transition: .3s all;}}
+    div > a:hover figure img {opacity: .7;}
+    ul {display: table; margin: 20px auto;}
+    ul li {line-height: 1.2;  margin: 10px auto; }
+    ul li a {color: $text}
+    div > a:hover h3 {color: $primary;}
+    ul li:hover a {color: $secondary;}
+}
+#all {background-color: $text; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; flex: 0 1 62%; max-width: 100%; min-height: 250px; transition: .4s all; 
+   .h2 {padding: 10px;}
+    .h2, .btn {color: #fff;}
+    &:hover {background-color: $primary;
+        .btn {background-color: $secondary; color: #fff;;}
+    }
+}
+
