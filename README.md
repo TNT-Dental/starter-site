@@ -4,7 +4,7 @@ Use this template for starting all new sites. This has updated jQuery, leanModal
 Page templates have pages created for:
 - home page / index.html
 - meet the dentist / meet-the-dentists.html
-- main services / serices.html
+- main services / services.html
 - service page / implants.html
 - contact / contact.html
     - this contains contact, appt form, doctor's landing section, generic tour gallery, smile gallery, faq, basic form, & video grid
