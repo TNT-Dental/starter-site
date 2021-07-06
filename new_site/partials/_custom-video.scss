@@ -14,5 +14,5 @@
 }
 
 [data-embed] .close:hover, [data-vimeo] .close:hover { background-color: #1b1b1b; color: #fff; }
-[data-embed] .close { position: absolute; top: 0; right: 0; }
+[data-embed] .close { position: absolute; top: 0; right: 0; min-width: 180px;}
 [data-embed] .close i:before { transform: rotate(45deg); }

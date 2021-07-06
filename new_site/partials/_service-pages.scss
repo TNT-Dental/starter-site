@@ -31,7 +31,7 @@
 
 
 /* ------------- Meet Doctor Page -------------- */
-
+.meet
 
 
 /* ------------- More to Explore -------------- */
@@ -42,7 +42,7 @@
 
 
 /* ------------- Services -------------- */
-.services { max-width: 1180px; margin: 40px auto; align-items: stretch; flex-wrap: wrap; flex-wrap: wrap;
+.services-grid { max-width: 1180px; margin: 40px auto; display: flex; align-items: stretch; flex-wrap: wrap; flex-wrap: wrap;
     > div {flex: 0 1 32%;  padding: 0 15px; margin: 10px auto;}
     h3 {display: block; text-align: center; line-height: 1.1; 
         span {display: block; font-size: 18px; } 
