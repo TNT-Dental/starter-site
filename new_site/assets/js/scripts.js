@@ -417,6 +417,22 @@ $(function () {
 });   
 
 
+   //Slider Form
+   $(".slick-form").slick({      
+    dots:true,     
+    infinite:false,
+    draggable: false,
+    prevArrow:'',
+    nextArrow:'.input .next', 
+    arrows:true,
+    customPaging:function(slider,index) {         
+        return '<button><span></span></button>' 
+         },
+    }); 
+    //prevent validator on slider form
+    $('footer .forms input').on('invalid', function(e) { e.preventDefault(); });
+
+
     var $status = $('.gallery .pagingInfo');
     var $gallery = $('.gallery .slick-gallery');
     $gallery.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {

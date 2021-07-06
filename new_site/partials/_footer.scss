@@ -1,11 +1,29 @@
 
 #find {margin: 50px auto;}
+#quest { padding: 10px 0 0 20px;; flex: 0 1 320px;  margin-top: 50px;
+    .fo-title {margin-bottom: 20px;}
+    .pagingInfo {color: $tertiary; font-size: 1.2em; margin-left: 10px;}
+    .slick-form { margin: 10px 0; max-width: 320px;}
+    .input {display: flex !important; width: 100%;}
+    .forms input, .forms textarea {
+        max-width: 230px; height: 50px; width: 100%;
+        background: transparent; padding: 10px;
+        font-size: 16px; border: none; background-color: #fff;;
+        margin: 0px; color: #000; 
+      }
+      .forms textarea {padding-top: 15px;}
+
+    .next {color: #fff; background-color: $secondary; min-width: 100px; position: relative; left: auto;  right: auto; top: auto; margin: 0;  font-size: 16px; font-family: $font; border: none; display: flex;justify-content: center; align-items: center; transform: none; text-transform: uppercase;
+        &:after {display: none;}
+        &:hover {background-color: $primary; border-color: $primary;}
+    }
+
+    ::placeholder {color: #2b2d2f;}
+    ::-webkit-input-placeholder { color: #2b2d2f;}
+}
+
 #map {position: relative; margin: 0; flex: 0 1 50%;
     iframe {height: 100%; width: 100%; border: none; display: block; }
-}
-#quest { padding: 10px; flex: 0 1 50%; text-align: center;
-    form {  max-width: 480px; margin: 20px auto;}
-    textarea {height: 125px;}
 }
 
 #assoc {

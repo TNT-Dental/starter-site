@@ -11,7 +11,9 @@
 
 /* ------------- Pagers -------------- */
 .slick-dots  {line-height: 1; margin-top: 10px;
-    li {line-height: 1;}
+    li {line-height: 1;
+        button {padding: 0;}
+    }
     span, a {
         cursor: pointer; background-color: $tertiary;
         height: 12px; width: 12px; border-radius: 50%;display: inline-block;  margin: 0 5px; opacity: .18;
