@@ -41,7 +41,7 @@ header {position: fixed; z-index: 100; left: 0; top: 0; width: 100%; background-
     nav ul ul ul ul {top: auto; left: 0px; position: relative; display: block; box-shadow: none; background-color: darken($secondary, 10%); li a {padding-left: 2em; padding-left: 2em; } }
     nav ul ul ul ul li a { background-color: darken($secondary, 8%);}
     nav ul ul ul ul li:hover a{background-color: darken($tertiary, 10%);} 
-    .has-submenu span > a, .has-submenu button {display: inline-block;}
+    .has-submenu span > a, .has-submenu button {display: inline-block; line-height: 1;}
     .has-submenu.open > ul { display: block; }
     .has-submenu.open > ul *:focus { background-color: rgba(255, 255, 255, 0.2);  }
     nav li button {display: inline-block;padding: 0;}
