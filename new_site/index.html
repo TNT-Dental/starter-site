@@ -247,7 +247,7 @@
     </div>
 
 
-    <div id="copy">&copy; 2021 ****** <span>|</span> <a href="sitemap.html">Sitemap</a>  <span>|</span>
+    <div id="copy">&copy; <span id="copyDate"></span> ****** <span>|</span> <a href="sitemap.html">Sitemap</a>  <span>|</span>
         <a href="privacy-policy.html">Privacy Policy</a>  <span>|</span>   <a href="https://www.tntdental.com" target="_blank">Site designed and maintained by <img src="assets/images/tntlogo.png" alt=""></a>
     </div>
 
@@ -285,7 +285,10 @@
 <script src="assets/js/foundation.js"></script>
 <script src="assets/js/scripts.js"></script>
 <!-- $section(scripts)$ -->
-
+<script>
+    date = document.getElementById("copyDate");
+    date.innerHTML = new Date().getFullYear();
+</script>
 
 </body>
 </html>
