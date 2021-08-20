@@ -88,12 +88,6 @@ $(function () {
         $("footer .hours").clone().appendTo(".mean-container .mean-nav");
     }
 
-       ///// Calls the leanModal popups
-  $("a[rel*=leanModal]").leanModal({
-    // top: 100,
-    overlay: 1,
-    closeButton: ".modal-close"
-});
 
 //// Prepends + appends Close button to popups modals - gives keyboard focus easier access to close button.
   $(".modal-content").prepend('<button class="modal-close" aria-label="close popup"><i></i><span>Close Popup</span></button>');
@@ -216,7 +210,7 @@ $(function () {
 
     ////////////////////////////// page divider
     var dividerStart = "> h2, .page-divider .wrap",
-        mobileWidth = 1025;
+        mobileWidth = 1000;
     $.when(setupServices()).done(function () {});
        function setupServices() {
 
@@ -254,15 +248,30 @@ $(function () {
     $(".block [class^='btn']").parent("p").addClass('has_btn');
 
 /////////  mini-blocks for h3 inside divider blocks
-    $(".page-divider h3").each(function() {
-        $(this).nextUntil('h3, .dividerLead').addBack().wrapAll('<div>')
-        .parent().addClass("mini-block")
+
+    $('.block').each(function() {
+        if (!$(this).find('.accordion').length) { 
+            $(".block > h3").each(function() {
+                $(this).nextUntil('h3, .dividerLead').addBack().wrapAll('<div>')
+                .parent().addClass("mini-block")
+            });
+        }
     });
+
+
     $(".mini-block").each(function (index) {
-        $(this)
+        if ($(this).closest('.block').find('.elem-left').length) {
+            $(this)
             .find('h3')
             .next(".elem-sm")
-            .addClass(index % 2 ? 'elem-left' : 'elem-right')
+            .addClass('elem-left')
+        } else {
+            $(this)
+            .find('h3')
+            .next(".elem-sm")
+            .addClass('elem-right')
+        }
+
         if ($(window).width() >= mobileWidth) {
             $(this).children(".elem-sm").insertBefore($(this).children("h3"));
         }
@@ -468,174 +477,7 @@ $(function () {
     }); 
 
 
-
 });   /*end of videos & slider function */
 
-
-
-  // leanModal v1.1 by Ray Stone - http://finelysliced.com.au
-  // Dual licensed under the MIT and GPL
-
-  (function($){$.fn.extend({leanModal:function(options){var defaults={top:100,overlay:0.5,closeButton:null};var overlay=$("<div id='lean_overlay'></div>");$("body").append(overlay);options=$.extend(defaults,options);return this.each(function(){var o=options;$(this).click(function(e){var modal_id=$(this).attr("href");$("#lean_overlay").click(function(){close_modal(modal_id)});$(o.closeButton).click(function(){close_modal(modal_id)});var modal_height=$(modal_id).outerHeight();var modal_width=$(modal_id).outerWidth();
-  $("#lean_overlay").css({"display":"block",opacity:0});$("#lean_overlay").fadeTo(200,o.overlay);$(modal_id).css({"display":"block","position":"fixed","opacity":0,"z-index":11000,"left":50+"%","margin-left":-(modal_width/2)+"px","top":o.top+"px"});$(modal_id).fadeTo(200,1);e.preventDefault()})});function close_modal(modal_id){$("#lean_overlay").fadeOut(200);$(modal_id).css({"display":"none"})}}})})(jQuery);
-
-  $("a[rel*=leanModal]").leanModal({top:10});
-
-document.addEventListener('keydown', function(event){
-	if(event.key === "Escape"){
-        $("#lean_overlay").trigger("click");
-	}
-});
-
-
-
-
-/* Other slick slider options - Delete if not needed */
-
-
-    // $(".slick-banner").slick({      
-    //     dots:true,   
-    //     arrows:false,          
-    //     appendDots:".banner-controls",
-    //     customPaging:function(slider,index) {         
-    //      return '<span></span>';
-    //     },
-    //     fade:true,
-    //     draggable:false,
-    //     autoplay:true,
-    //     autoplaySpeed:8000,
-    //     speed:800,        
-    //     responsive: 
-    //     [{
-    //     breakpoint: 1023,
-    //     settings: {                         
-    //     } 
-    //     }]
-
-    // }); 
-
-    // $("#banner-nav").slick({
-    //     arrows:false,   
-    //     dots:false,     
-    //     draggable:false,
-    //     infinite:false,
-    //     autoplay:false,
-    //     slidesToShow:4,
-    //     focusOnSelect:true,
-    //     asNavFor: ".slick-banner"
-    // }); 
-
-
-    // $(".slick-specials").slick({      
-    //     dots:true,     
-    //     arrows:true,   
-    //     appendArrows:".specials-controls",
-    //     appendDots:".specials-controls",
-        // prevArrow:'<a href="#" id="prev"><i class="icon-angle-left"></i></a>',
-        // nextArrow:'<a href="#" id="next"><i class="icon-angle-right"></i></a>',      
-    //     slidesToShow:2,
-    //     focusOnSelect:true,
-    //     responsive: 
-    //     [{
-    //         breakpoint: 900,
-    //         settings: {
-    //             slidesToShow:1
-    //         } 
-    //     }],
-    //     customPaging:function(slider,index) {
-    //         return '<span></span>';
-    //     }
-    // }); 
-
-    // if(theWindow.width() > 1023) {
-    //     $(".slick-about").slick({      
-    //         dots:true,     
-    //         arrows:true,           
-    //         appendArrows:".about-controls",
-        // prevArrow:'<a href="#" id="prev"><i class="icon-angle-left"></i></a>',
-        // nextArrow:'<a href="#" id="next"><i class="icon-angle-right"></i></a>',     
-    //         appendDots:".about-controls",
-    //         customPaging:function(slider,index) {
-    //         var totalCount = "", totalSlides = ""; //to add 0
-    //         if (slider.slideCount < 10) { totalCount = ""; }
-    //         if (index < 9) { totalSlides ="";  }   
-    //         return '<span><b>' + totalSlides + (index + 1) + '</b>/' + totalCount + slider.slideCount +'</span>';
-    //         }
-    //     });         
-    // }
-
-    //  if (theWindow.width() > 1023) {
-    //     $(".slick-callouts").slick({      
-    //         dots:false,     
-    //         arrows:false,           
-    //         fade:true,
-    //         draggable:false,
-    //         focusOnSelect: true,
-    //         autoplay:false,
-    //         asNavFor: '#switch-nav'
-    //     }); 
-    //     $("#callouts-nav").slick({
-    //         arrows:false,   
-    //         dots:false,     
-    //         draggable:false,
-    //         infinite:false,
-    //         autoplay:false,
-    //         slidesToShow:6,
-    //         focusOnSelect:true,
-    //         asNavFor: ".slick-switch"
-    //     });
-    // }
-
-    // if (theWindow.width() > 1023) {
-    //     $(".slick-switch").slick({      
-    //         dots:false,     
-    //         arrows:false,           
-    //         fade:true,
-    //         draggable:false,
-    //         focusOnSelect: true,
-    //         autoplay:false,
-    //         asNavFor: '#switch-nav'
-    //     }); 
-    //     $("#switch-nav").slick({
-    //         arrows:false,   
-    //         dots:false,     
-    //         draggable:false,
-    //         infinite:false,
-    //         autoplay:false,
-    //         slidesToShow:3,
-    //         focusOnSelect:true,
-    //         asNavFor: ".slick-switch"
-    //     });
-    // }
-
-    // if(theWindow.width() > 1023) {
-
-    // $(".services-nav").slick({
-    //     arrows:false,   
-    //     dots:false,     
-    //     draggable:false,
-    //     infinite:false,
-    //     vertical:true,
-    //     slidesToShow:5,
-    //     focusOnSelect:true,
-    //     asNavFor: ".slick-services"
-    // });
-    // }
-
-    // if(theWindow.width() > 1023) {
-    //     $(".slick-callouts").slick({
-    //         dots:true,
-    //         arrows:true,
-    //         centerMode:true,
-    //         slidesToShow:3,
-    //         appendDots:".callouts-controls",
-    //         appendArrows:".callouts-controls",
-        // prevArrow:'<a href="#" id="prev"><i class="icon-angle-left"></i></a>',
-        // nextArrow:'<a href="#" id="next"><i class="icon-angle-right"></i></a>',                      
-    //         customPaging:function(slider,index) {         
-    //             return '<span></span>';
-    //         }
-    //     }); 
-    // }    
 
 

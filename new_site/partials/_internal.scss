@@ -39,7 +39,7 @@ main ul {list-style: none;  padding: 0; margin: 10px 0; text-align: left; overfl
 
 /* ------------- Landing -------------- */
 .landing {
-    display: flex; align-items: flex-start; justify-content: space-around; flex-wrap: wrap;
+    display: flex; align-items: flex-start; justify-content: space-around; flex-wrap: wrap; margin: 40px auto;
     a {flex: 0 1 30%; margin: 10px auto 20px; text-align: center;
         h3 {padding: 10px; background-color: $primary; color: #fff; font: 400 15px/1 $font2; text-transform: none; transition: .3s all;}
         &:hover h3 {background-color: $secondary; color: #fff;}

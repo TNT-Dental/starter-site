@@ -33,8 +33,15 @@ $(".youtube").each(function(){$(this).is(":empty")&&$(this).empty().append('<img
 
 
 /* target links same and/or forward page */
-$(window).ready(function(){var interval=setInterval(function(){if(window.location.hash)
-    window.location=window.location.hash},0);setTimeout(function(){clearInterval(interval)},1000);function scrollToAnchor(target){var $target=$("a[name='"+target.substr(1)+"']"),targetName=window.location.href.split("#")[1];$('html, body').stop().animate({'scrollTop':$target.offset().top},1000,function(){document.location.hash=targetName})}
-   $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').not('[href="#ask-quest"]').not('[rel="leanModal"]').click(function(event){if(location.pathname.replace(/^\//,'')==this.pathname.replace(/^\//,'')&&location.hostname==this.hostname){var target=$(this.hash);target=target.length?target:$('[name='+this.hash.slice(1)+']');if(target.length){event.preventDefault();$('html, body').animate({scrollTop:target.offset().top},1000,function(){})}}})
+// $(window).ready(function(){var interval=setInterval(function(){if(window.location.hash)
+//     window.location=window.location.hash},0);setTimeout(function(){clearInterval(interval)},1000);function scrollToAnchor(target){var $target=$("a[name='"+target.substr(1)+"']"),targetName=window.location.href.split("#")[1];$('html, body').stop().animate({'scrollTop':$target.offset().top},1000,function(){document.location.hash=targetName})}
+//    $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').not('[href="#ask-quest"]').not('[rel="leanModal"]').click(function(event){if(location.pathname.replace(/^\//,'')==this.pathname.replace(/^\//,'')&&location.hostname==this.hostname){var target=$(this.hash);target=target.length?target:$('[name='+this.hash.slice(1)+']');if(target.length){event.preventDefault();$('html, body').animate({scrollTop:target.offset().top},1000,function(){})}}})
 
-  });
+//   });
+
+
+
+!function(e){e.fn.extend({leanModal:function(a){var o=e("<div id='lean_overlay'></div>");return e("body").append(o),a=e.extend({top:"0",overlay:"rgba(0,0,0,0)",closeButton:".modal-close"},a),this.each(function(){var o=a;e(this).click(function(a){e("body").addClass("lean-open").css({overflow:"hidden"});var n=e(this).attr("href");e(o.closeButton).click(function(){!function(a){e("body").removeClass("lean-open");e("#lean_overlay").fadeOut(200),e("body").css({overflow:"visible"}),e(a).css({display:"none"});var o=e("#lean_overlay iframe"),n=o.attr("src");o.attr("src",""),o.attr("src",n)}(n)});e(n).outerHeight(),e(n).outerWidth();e("#lean_overlay").css({display:"flex",background:"rgba(0,0,0,.7)"}),e("#lean_overlay").fadeTo(200,o.overlay),e(n).appendTo("#lean_overlay").css({display:"block","z-index":1001,opacity:0}),e(n).fadeTo(200,1),a.preventDefault()})})}})
+         }(jQuery);
+               
+  $("a[rel*=leanModal]").leanModal();

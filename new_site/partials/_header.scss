@@ -8,7 +8,7 @@ header {position: fixed; z-index: 100; left: 0; top: 0; width: 100%; background-
     .pho:hover, .phy:hover  {color: $secondary;}
     .phy i, .pho i {color: $tertiary; font-size: 15px; position: absolute; left: 0; top: 50%; transform: translateY(-50%);}
     li a {font-weight: 400; font-family: $font;}
-    nav .active a{     box-shadow: inset 0 -1px 0 0 $primary; }
+    // nav .active a{     box-shadow: inset 0 -1px 0 0 $primary; }
 }
 .hd-info { display: flex; align-items: center;  margin-right: 10px; justify-content: flex-end;}
 .hd-btns { display: flex; flex-wrap: wrap; flex: 0 1 280px; justify-content: space-between;

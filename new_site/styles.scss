@@ -2,7 +2,7 @@
 
 /* ------------- Base Setup Styles -------------- */
 body {  position: relative; background-color: #fff; color: $text;  font: 400 17px/1.2 $font; counter-reset: section; overflow-x: hidden;  }
-p {color: $text; font: 400 18px/1.666 $font; }
+p {color: $text; font: 400 18px/1.666 $font; margin: 10px auto; }
 a {cursor: pointer; text-decoration: none; color: $primary; } a:hover { color: $secondary;}
 hr {position: relative; display: table; clear: both; margin: 40px auto; width: 100%; height: 1px; background-color: $secondary;}
 *:focus, a:focus, button:focus, input:focus {outline-width: medium; outline-color: $primary!important;}

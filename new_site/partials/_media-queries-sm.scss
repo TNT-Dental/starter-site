@@ -24,7 +24,7 @@
     /* ------------- INTERNAL  750 -------------- */
         .why ul {flex-wrap: wrap;}
         .why ul li {flex: 1 1 100%;}
-    
+        .modal-content {margin: 80px auto 100px!important; top: 100px !important;}
         
     }
     
@@ -48,7 +48,7 @@
         .contact {text-align: center; display: block;}
         .contact > div:first-child, .contact p {margin: 10px auto;}
         .gallery {padding: 0;}
-        .services >div, #all {flex: 1 1 100%;}
+        .services-grid >div, #all {flex: 1 1 100%;}
         .youtube[class*="elem-"] { width: 100%; }
         [data-player][class^="elem"] {min-width: 100%;}
         .landing {display: block;}
@@ -82,7 +82,7 @@
     
     @media (max-width:400px) {
         
-        [class^="btn"], .more-to-explore [class^="btn"] {min-width: 100%; width: 100%; margin: 8px auto;}
+        .more-to-explore [class^="btn"] {min-width: 100%; width: 100%; margin: 8px auto;}
         [data-embed] .close {display: block; position: unset; text-align: center;  padding: 4px; }
     
     }

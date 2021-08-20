@@ -1,7 +1,7 @@
 /* ------------- Base Setup Styles -------------- */
 body { position: relative; background-color: #fff; color: #545454; font: 400 17px/1.2 "Lato", sans-serif; counter-reset: section; overflow-x: hidden; }
 
-p { color: #545454; font: 400 18px/1.666 "Lato", sans-serif; }
+p { color: #545454; font: 400 18px/1.666 "Lato", sans-serif; margin: 10px auto; }
 
 a { cursor: pointer; text-decoration: none; color: #0868b1; }
 
@@ -57,8 +57,6 @@ header .pho:hover, header .phy:hover { color: #08a9b1; }
 header .phy i, header .pho i { color: #1e8186; font-size: 15px; position: absolute; left: 0; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); }
 
 header li a { font-weight: 400; font-family: "Lato", sans-serif; }
-
-header nav .active a { -webkit-box-shadow: inset 0 -1px 0 0 #0868b1; box-shadow: inset 0 -1px 0 0 #0868b1; }
 
 .hd-info { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; margin-right: 10px; -webkit-box-pack: end; -ms-flex-pack: end; justify-content: flex-end; }
 
@@ -464,11 +462,12 @@ footer .social a:first-of-type { margin-left: 0; }
 .mini-block { display: table; clear: both; padding: 30px 0 0; margin-top: 30px; border-top: 1px solid #ededed; }
 
 /* ------------- Meet Doctor Page -------------- */
-.meet .more-to-explore { position: relative; text-align: center; margin: 0 auto; padding: 40px 10px 60px; background-color: #1e8186; }
+/* ------------- More to Explore -------------- */
+.more-to-explore { position: relative; text-align: center; margin: 0 auto; padding: 40px 10px 60px; background-color: #1e8186; }
 
-.meet .more-to-explore p { padding: 10px; margin: auto; max-width: 1150px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+.more-to-explore p { padding: 10px; margin: auto; max-width: 1150px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
 
-.meet .more-to-explore [class^="btn"] { min-width: 350px; margin: 5px; }
+.more-to-explore [class^="btn"] { min-width: 350px; margin: 5px; }
 
 /* ------------- Services -------------- */
 .services-grid { max-width: 1180px; margin: 40px auto; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: stretch; -ms-flex-align: stretch; align-items: stretch; -ms-flex-wrap: wrap; flex-wrap: wrap; flex-wrap: wrap; }
@@ -549,7 +548,7 @@ main ul li:before { content: '\e832'; color: #0868b1; position: absolute; left: 
 #main-img img { display: none; }
 
 /* ------------- Landing -------------- */
-.landing { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; -ms-flex-pack: distribute; justify-content: space-around; -ms-flex-wrap: wrap; flex-wrap: wrap; }
+.landing { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; -ms-flex-pack: distribute; justify-content: space-around; -ms-flex-wrap: wrap; flex-wrap: wrap; margin: 40px auto; }
 
 .landing a { -webkit-box-flex: 0; -ms-flex: 0 1 30%; flex: 0 1 30%; margin: 10px auto 20px; text-align: center; }
 
@@ -745,7 +744,8 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill { bac
   /* ------------- INTRO  750 -------------- */
   /* ------------- INTERNAL  750 -------------- */
   .why ul { -ms-flex-wrap: wrap; flex-wrap: wrap; }
-  .why ul li { -webkit-box-flex: 1; -ms-flex: 1 1 100%; flex: 1 1 100%; } }
+  .why ul li { -webkit-box-flex: 1; -ms-flex: 1 1 100%; flex: 1 1 100%; }
+  .modal-content { margin: 80px auto 100px !important; top: 100px !important; } }
 
 @media (max-width: 590px) { /* ------------- HEADER  590 -------------- */
   /* ------------- HOME  590 -------------- */
@@ -756,7 +756,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill { bac
   .contact { text-align: center; display: block; }
   .contact > div:first-child, .contact p { margin: 10px auto; }
   .gallery { padding: 0; }
-  .services > div, #all { -webkit-box-flex: 1; -ms-flex: 1 1 100%; flex: 1 1 100%; }
+  .services-grid > div, #all { -webkit-box-flex: 1; -ms-flex: 1 1 100%; flex: 1 1 100%; }
   .youtube[class*="elem-"] { width: 100%; }
   [data-player][class^="elem"] { min-width: 100%; }
   .landing { display: block; } }
@@ -770,7 +770,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill { bac
   #fixed-tabs strong { display: none; }
   /* ------------- INTERNAL  480 -------------- */ }
 
-@media (max-width: 400px) { [class^="btn"], .more-to-explore [class^="btn"] { min-width: 100%; width: 100%; margin: 8px auto; }
+@media (max-width: 400px) { .more-to-explore [class^="btn"] { min-width: 100%; width: 100%; margin: 8px auto; }
   [data-embed] .close { display: block; position: unset; text-align: center; padding: 4px; } }
 
 /*end */
