@@ -1,11 +1,11 @@
-@media (max-width:750px) {
-    /* ------------- HEADER  750 -------------- */
+@media (max-width:768px) {
+    /* ------------- HEADER  768 -------------- */
         #hd-info {flex: 0 1 auto;}
         header .phy {display: none;}
         header .pho {font-size: 18px;}
     
     
-    /* ------------- HOME  750 -------------- */
+    /* ------------- HOME  768 -------------- */
         #reviews {
             .contain {padding: 0 10px;}
             .slick-controls {flex-wrap: wrap; margin: 10px auto;}
@@ -13,19 +13,20 @@
         }
 
         
-    /* ------------- FOOTER  750 -------------- */
+    /* ------------- FOOTER  768 -------------- */
         #find {display: block;}
         #map {height: 400px;}
     
-    /* ------------- INTRO  750 -------------- */
+    /* ------------- INTRO  768 -------------- */
     
     
         
-    /* ------------- INTERNAL  750 -------------- */
+    /* ------------- INTERNAL  768 -------------- */
         .why ul {flex-wrap: wrap;}
         .why ul li {flex: 1 1 100%;}
         .modal-content {margin: 80px auto 100px!important; top: 100px !important;}
-        
+        .gallery {padding: 10px;}
+        .gallery .slick-arrow {position: relative; display: inline-flex;  transform: none; top: auto;  margin: 0;}
     }
     
     @media (max-width:590px) {
@@ -52,7 +53,9 @@
         .youtube[class*="elem-"] { width: 100%; }
         [data-player][class^="elem"] {min-width: 100%;}
         .landing {display: block;}
-    
+        .gallery article .flex-ed {flex-wrap: wrap;}
+        .gallery article .flex-ed >div {flex: 1 1 100%; }
+        .gallery article .flex-ed span {margin-bottom: 40px; flex: 1 1 100%;}
     }
     
     

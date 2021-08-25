@@ -16,9 +16,9 @@ h1, h2, h3, h4, h5, h6 { margin: 0; position: relative; }
 
 #page-title h1, .h1 small { color: #545454; font: 400 16px/1 "Lato", sans-serif; display: block; margin: 10px auto; text-transform: uppercase; }
 
-#page-title h1:only-child, h2#append, .h1 { color: #545454; font: 700 38px/1 "Noto Serif", serif; }
+#page-title h1:only-child, h2#append, .h1 { color: #545454; font: 700 60px/1 "Noto Serif", serif; }
 
-h2, .h2, .dividerLead, .more-to-explore span { color: #545454; font: 700 35px/1 "Noto Serif", serif; position: relative; }
+h2, .h2, .dividerLead, .more-to-explore span { color: #545454; font: 700 40px/1 "Noto Serif", serif; position: relative; }
 
 h3, .h3 { color: #545454; display: block; position: relative; font: 400 30px/1.1 "Noto Serif", serif; text-transform: uppercase; }
 
@@ -410,13 +410,6 @@ footer .social a:first-of-type { margin-left: 0; }
 
 .slick-gallery figcaption { margin: 5px auto; }
 
-/* ------------- Media Query -------------- */
-@media (max-width: 700px) { .gallery { padding: 10px; }
-  .gallery .slick-arrow { position: relative; display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex; -webkit-transform: none; transform: none; top: auto; margin: 0; }
-  .gallery article .flex-ed { -ms-flex-wrap: wrap; flex-wrap: wrap; }
-  .gallery article .flex-ed > div { -webkit-box-flex: 1; -ms-flex: 1 1 100%; flex: 1 1 100%; }
-  .gallery article .flex-ed span { margin-bottom: 40px; -webkit-box-flex: 1; -ms-flex: 1 1 100%; flex: 1 1 100%; } }
-
 /* ------------------ Why ----------------- */
 .why { padding: 30px 10px 10px; position: relative; counter-reset: why-section; }
 
@@ -562,17 +555,19 @@ main ul li:before { content: '\e832'; color: #0868b1; position: absolute; left: 
 #refer .simple { max-width: 650px; margin: auto; }
 
 /* ------------- FAQ -------------- */
-.accordion { margin: 20px auto; text-align: left; }
+.accordion { margin: 40px auto; text-align: left; max-width: 1100px; border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
 
-.accordion .toggle { position: relative; cursor: pointer; clear: both; padding: 10px 10px 10px 55px; margin: 7px auto 0; width: 100%; display: block; text-align: left; }
+.accordion .toggle { position: relative; cursor: pointer; clear: both; padding: 20px 50px 20px 0px; border-top: 1px solid rgba(0, 0, 0, 0.2); width: 100%; display: block; text-align: left; }
 
-.accordion .toggle:hover h2, .accordion .toggle:hover h3 { color: #08a9b1; }
+.accordion .toggle:hover h2, .accordion .toggle:hover h3, .accordion .toggle:hover .h2, .accordion .toggle:hover .h3 { color: #08a9b1; }
 
-.accordion .toggle.active:before { background-color: #08a9b1; content: 'A'; }
+.accordion .toggle.active:after { content: '+'; top: 10px; font-size: 2em; padding-bottom: 2px; }
 
-.accordion .toggle:before { content: 'Q'; color: #fff; font: 700 24px/1.5 "Lato", sans-serif; border-radius: 50%; position: absolute; top: 0; left: 0; width: 48px; height: 48px; background-color: #0868b1; -webkit-box-shadow: inset 0 3px 8px rgba(0, 1, 1, 0.19); box-shadow: inset 0 3px 8px rgba(0, 1, 1, 0.19); text-align: center; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+.accordion .toggle:after { content: '\2014'; position: absolute; top: 13px; right: 0; font-size: 24px; width: 50px; text-align: center; width: 43px; height: 43px; color: #545454; border: 1px solid #545454; background-color: #fff; border-radius: 50%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
 
-.accordion > div { display: none; padding: 0 20px 20px 55px; }
+.accordion > div { display: none; padding: 0 50px 20px 0; }
+
+.accordion > div p:first-of-type { margin-top: 0; }
 
 /* ------------- Contact -------------- */
 .hours { display: table; margin: 10px auto; text-align: left !important; }
@@ -704,23 +699,23 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill { bac
 @media (max-width: 730px) { #fixed-tabs .ra strong { display: none; }
   #fixed-tabs .ra { -webkit-box-flex: 2; -ms-flex: 2; flex: 2; } }
 
-@media (max-width: 1000px) { /* ------------- HOME 1000 -------------- */
+@media (max-width: 1024px) { /* ------------- HOME 1024 -------------- */
   .split .flex-ed { display: block; text-align: center; }
   .split figure { display: block; margin: auto; }
   .split article { margin: 20px auto; }
   #reviews .slick-arrow { position: relative; left: auto; right: auto; top: auto; -webkit-transform: none; transform: none; }
-  /* ------------- FOOTER 1000 -------------- */
+  /* ------------- FOOTER 1024 -------------- */
   #fo-contents { -ms-flex-wrap: wrap; flex-wrap: wrap; text-align: center; }
   footer .hours { margin: 20px auto; }
   .fo-title { text-align: center; }
-  /* ------------- INTRO 1000 -------------- */
+  /* ------------- INTRO 1024 -------------- */
   #interior-banner .flex-title .contain { max-width: 100%; }
   .flex-title { display: block; text-align: center; }
   .flex-title #page-title { text-align: center; }
   #main-img { min-height: auto; }
   #main-img img { display: block; width: 100%; }
   #intro { margin: 20px auto; }
-  /* ------------- INTERNAL  1000 -------------- */
+  /* ------------- INTERNAL  1024 -------------- */
   .block { text-align: center; padding: 40px 10px; }
   .block .contain { display: block; }
   .block .btn { margin: 10px auto; }
@@ -730,22 +725,24 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill { bac
   .services-grid > div, #all { -webkit-box-flex: 0; -ms-flex: 0 1 48%; flex: 0 1 48%; }
   [data-player][class^="elem"] { max-width: 650px; } }
 
-@media (max-width: 750px) { /* ------------- HEADER  750 -------------- */
+@media (max-width: 768px) { /* ------------- HEADER  768 -------------- */
   #hd-info { -webkit-box-flex: 0; -ms-flex: 0 1 auto; flex: 0 1 auto; }
   header .phy { display: none; }
   header .pho { font-size: 18px; }
-  /* ------------- HOME  750 -------------- */
+  /* ------------- HOME  768 -------------- */
   #reviews .contain { padding: 0 10px; }
   #reviews .slick-controls { -ms-flex-wrap: wrap; flex-wrap: wrap; margin: 10px auto; }
   #reviews .slick-arrow { position: relative; -webkit-transform: none; transform: none; top: auto; }
-  /* ------------- FOOTER  750 -------------- */
+  /* ------------- FOOTER  768 -------------- */
   #find { display: block; }
   #map { height: 400px; }
-  /* ------------- INTRO  750 -------------- */
-  /* ------------- INTERNAL  750 -------------- */
+  /* ------------- INTRO  768 -------------- */
+  /* ------------- INTERNAL  768 -------------- */
   .why ul { -ms-flex-wrap: wrap; flex-wrap: wrap; }
   .why ul li { -webkit-box-flex: 1; -ms-flex: 1 1 100%; flex: 1 1 100%; }
-  .modal-content { margin: 80px auto 100px !important; top: 100px !important; } }
+  .modal-content { margin: 80px auto 100px !important; top: 100px !important; }
+  .gallery { padding: 10px; }
+  .gallery .slick-arrow { position: relative; display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex; -webkit-transform: none; transform: none; top: auto; margin: 0; } }
 
 @media (max-width: 590px) { /* ------------- HEADER  590 -------------- */
   /* ------------- HOME  590 -------------- */
@@ -759,7 +756,10 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill { bac
   .services-grid > div, #all { -webkit-box-flex: 1; -ms-flex: 1 1 100%; flex: 1 1 100%; }
   .youtube[class*="elem-"] { width: 100%; }
   [data-player][class^="elem"] { min-width: 100%; }
-  .landing { display: block; } }
+  .landing { display: block; }
+  .gallery article .flex-ed { -ms-flex-wrap: wrap; flex-wrap: wrap; }
+  .gallery article .flex-ed > div { -webkit-box-flex: 1; -ms-flex: 1 1 100%; flex: 1 1 100%; }
+  .gallery article .flex-ed span { margin-bottom: 40px; -webkit-box-flex: 1; -ms-flex: 1 1 100%; flex: 1 1 100%; } }
 
 @media (max-width: 480px) { /* ------------- HEADER  480 -------------- */
   .hd-info { display: none; }
