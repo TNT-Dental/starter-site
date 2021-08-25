@@ -52,19 +52,19 @@ main ul {list-style: none;  padding: 0; margin: 10px 0; text-align: left; overfl
 #refer .simple {max-width: 650px; margin: auto;}
 
 
-
 /* ------------- FAQ -------------- */
-.accordion {margin: 20px auto; text-align: left;
-    .toggle {position: relative; cursor: pointer; clear: both;  padding: 10px 10px 10px 55px; margin: 7px auto 0;
+.accordion {margin: 40px auto; text-align: left; max-width: 1100px; border-bottom: 1px solid rgba(0,0,0,0.2);
+    .toggle {position: relative; cursor: pointer; clear: both;  padding: 20px 50px 20px 0px; border-top: 1px solid rgba(0,0,0,0.2);
         width: 100%; display: block; text-align: left;
         &:hover {
-            h2, h3 {color: $secondary}
+            h2, h3,  .h2, .h3 {color: $secondary}
         }
-        &.active:before  {background-color: $secondary; content: 'A';}
+        &.active:after  {content: '+'; top: 10px; font-size: 2em; padding-bottom: 2px;}
     }
-    .toggle:before{content: 'Q'; color: #fff;
-        font: 700 24px/1.5 $font; border-radius: 50%; position: absolute; top: 0; left: 0;  width: 48px;  height: 48px; background-color: $primary; box-shadow: inset 0 3px 8px rgba(0, 1, 1, 0.19); text-align: center; display: flex;align-items: center; justify-content: center;}
-    > div {display:none; padding:0 20px 20px 55px}
+    .toggle:after{content: '\2014'; position: absolute; top: 13px; right: 0; font-size: 24px;width: 50px; text-align: center;width: 43px; height: 43px; color: $text; border: 1px solid $text; background-color: #fff; border-radius: 50%; display: flex;align-items: center; justify-content: center;}
+    > div {display:none; padding:0 50px 20px 0;
+        p:first-of-type {margin-top: 0;}
+    }
 }
 
 

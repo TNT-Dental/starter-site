@@ -11,8 +11,8 @@ hr {position: relative; display: table; clear: both; margin: 40px auto; width: 1
 /* ------------- Text Styles -------------- */
 h1, h2, h3, h4, h5, h6 {margin: 0; position: relative;}
 #page-title h1, .h1 small { color: $text; font: 400 16px/1 $font; display: block; margin: 10px auto; text-transform: uppercase; }
-#page-title h1:only-child, h2#append, .h1 {color: $text; font: 700 38px/1 $font2; }
-h2, .h2, .dividerLead, .more-to-explore span {color: $text; font: 700 35px/1 $font2; position: relative;}
+#page-title h1:only-child, h2#append, .h1 {color: $text; font: 700 60px/1 $font2; }
+h2, .h2, .dividerLead, .more-to-explore span {color: $text; font: 700 40px/1 $font2; position: relative;}
 h3, .h3 {color: $text; display: block; position: relative; font: 400 30px/1.1 $font2; text-transform: uppercase;  }
 .h4, .toggle h2, .toggle h3 {color: $text; display: block; position: relative; font: 400 24px/1.25 $font;  }
 .more-to-explore span {color: #fff; }

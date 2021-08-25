@@ -177,7 +177,7 @@ $(function () {
      var selectBG = Math.floor(Math.random() * 10) + 1;
      if (!$("body").hasClass("page_index")) {
          $('#interior-banner').css({
-             'background-image': 'url(assets/images/interior-banner-' + selectBG + '.jpg)',
+             'background-image': 'url(assets/images/banner-' + selectBG + '.jpg)',
              'background-size': 'cover',
              'background-repeat': 'no-repeat',
              'background-position': 'center center'
