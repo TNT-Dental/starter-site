@@ -18,7 +18,7 @@
     .contain { display: flex; justify-content: space-around; align-items: flex-start;}
     h2 {margin-bottom: 20px;}
     .wrap {height: 0;}
-    article { margin: auto; flex: 0 1 550px; }
+    article { margin: auto 0; flex: 0 1 550px; }
     article p:first-of-type {margin-top: 0;}
     ul li{margin-left: 0;}
     .btn {margin-left: 0;}
@@ -27,8 +27,9 @@
 }
 .block:nth-of-type(odd):before { background-color: #ededed; }
 
-.mini-block {display: table; clear: both; padding: 30px 0 0; margin-top: 30px; border-top: 1px solid #ededed }
+.mini-block {display: table; clear: both; max-width: 1140px; width: 100%; margin: 30px auto;}
 
+.block.no_img {article {max-width: 1130px; margin: auto}}
 
 /* ------------- Meet Doctor Page -------------- */
 // .meet
@@ -45,14 +46,14 @@
 .services-grid { max-width: 1180px; margin: 40px auto; display: flex; align-items: stretch; flex-wrap: wrap; flex-wrap: wrap;
     > div {flex: 0 1 32%;  padding: 0 15px; margin: 10px auto;}
     h3 {display: block; text-align: center; line-height: 1.1; 
+        a {color: $text;}
         span {display: block; font-size: 18px; } 
     }
-    figure {  transition: .4s all; img {width: 100%; transition: .3s all;}}
-    div > a:hover figure img {opacity: .7;}
+    figure {  transition: .4s all; img {width: 100%; }}
     ul {display: table; margin: 20px auto;}
     ul li {line-height: 1.2;  margin: 10px auto; }
     ul li a {color: $text}
-    div > a:hover h3 {color: $primary;}
+    h3:hover a {color: $primary;}
     ul li:hover a {color: $secondary;}
 }
 #all {background-color: $text; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; flex: 0 1 62%; max-width: 100%; min-height: 250px; transition: .4s all; 

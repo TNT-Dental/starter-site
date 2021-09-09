@@ -3,7 +3,7 @@ $(function () {
         meanMenuContainer: 'header .place-nav',
         meanMenuOpen: "<i class='icon-menu'></i>",
         meanMenuClose: "<i class='icon-plus'></i>",
-        meanScreenWidth: 1025,
+        meanScreenWidth: 1024,
         meanDisplay: "block"
     });
 
@@ -39,14 +39,14 @@ $(function () {
     $(window).on('resize', function () {
         $("body").css('padding-top', $("header").outerHeight());
         $(".mean-container .mean-nav").css('bottom', $("#fixed-tabs").outerHeight());
-        if ($(window).width() <= 1025) {
+        if ($(window).width() <= 1024) {
             $("footer").css('padding-bottom', $("#fixed-tabs").outerHeight());
         }
     }).trigger('resize');
 
     /////////////// fixed header with animated in on desktop and attach on mobile
     theWindow.on("scroll", function () {
-        if (theWindow.width() > 1025) {
+        if (theWindow.width() > 1024) {
             if (theWindow.scrollTop() >= headerBottom) {
                 body.addClass("fix-nav");
                 header.addClass("animated slideInDown");
@@ -73,17 +73,14 @@ $(function () {
         }
     });
 
-    if (theWindow.width() > 1025) {
+    if (theWindow.width() > 1024) {
        $('nav > ul > .has-submenu > a').append("<button aria-label='Toggle submenu'><i class='icon-angle-down'></i></button>")
        $('nav ul ul > .has-submenu > a').append("<button aria-label='Toggle submenu'><i class='icon-angle-right'></i></button>")
     }
 
-
-    if (theWindow.width() <= 1025) {
+    if ($(window).width() <= 1024) {
         var didScroll,lastScrollTop=0,delta=5,navbarHeight=$("header").outerHeight();function hasScrolled(){var l=$(this).scrollTop();Math.abs(lastScrollTop-l)<=delta||(l>lastScrollTop&&l>navbarHeight?$("header").removeClass("nav-down").addClass("nav-up"):l+$(window).height()<$(document).height()&&$("header").removeClass("nav-up").addClass("nav-down"),lastScrollTop=l)}$(window).scroll(function(l){didScroll=!0}),setInterval(function(){didScroll&&(hasScrolled(),didScroll=!1)},250);
-    }
-
-    if ($(window).width() <= 1025) {
+   
         $("footer .social").clone().prependTo(".mean-container .mean-nav");
         $("footer .hours").clone().appendTo(".mean-container .mean-nav");
     }
@@ -109,11 +106,11 @@ $(function () {
       });
   // Closing popup modal turns off video
     $(".modal-close").on("click", function(){
-        for (var i = 0; i < $('.modal-content .youtube iframe').length; i++) {
-          var video = $('.modal-content .youtube iframe').attr("src");
+        for (var i = 0; i < $('.modal-content frame').length; i++) {
+          var video = $('.modal-content iframe').attr("src");
           var video = video.replace("autoplay=1", "autoplay=0") ;
-          $('.modal-content youtube iframe').attr("src","");
-          $('.modal-content .youtube iframe').attr("src",video);
+          $('.modal-content iframe').attr("src","");
+          $('.modal-content iframe').attr("src",video);
         }
     });
 
@@ -175,7 +172,7 @@ $(function () {
 
 ////////////////////////////// Randomized Banner Background
      var selectBG = Math.floor(Math.random() * 10) + 1;
-     if (!$("body").hasClass("page_index")) {
+     if (!$("body").hasClass("meet")) {
          $('#interior-banner').css({
              'background-image': 'url(assets/images/banner-' + selectBG + '.jpg)',
              'background-size': 'cover',
@@ -183,6 +180,16 @@ $(function () {
              'background-position': 'center center'
          })
      }
+
+     $("#static-banner").each(function() {
+        var staticBn = $(this).find("img").attr("src");
+        $('#interior-banner').css({
+            'background-image': 'url(' + staticBn + ')',
+            'background-size': 'cover',
+            'background-repeat': 'no-repeat',
+            'background-position': 'center center'
+        })
+    })
 
 
     ////////////////////////////// FAQ / Accordion
@@ -210,7 +217,7 @@ $(function () {
 
     ////////////////////////////// page divider
     var dividerStart = "> h2, .page-divider .wrap",
-        mobileWidth = 1000;
+        mobileWidth = 1024;
     $.when(setupServices()).done(function () {});
        function setupServices() {
 
@@ -303,19 +310,6 @@ $(function () {
     //           $('.more-to-explore').addClass("bkgrd");
     //       }
 
-
-    //////// Takes an image and makes it background image to fill flexed container
-    if (theWindow.width() > 1001) {
-        $("#main-img").each(function() {
-            var mainBkg = $(this).find("img").attr("src");
-                    $(this).css({
-                        'background-image': 'url(' + mainBkg + ')',
-                        'background-size': 'cover',
-                        'background-repeat': 'no-repeat',
-                        'background-position': 'top 15% center',
-                    })
-            });
-        }
     
   //////// Takes data-image source and makes it background image to fill flexed container
      ////// ie:  <div class="bkg-img" data-img="assets/images/callout-1.jpg">
@@ -331,15 +325,18 @@ $(function () {
         })
       */
 
-    ///// Takes main banner image on page and flexes with page title
-    $("#main-img").appendTo("#interior-banner .contain")
-    $("#main-img").appendTo("#interior-banner")
-    $('#interior-banner').each(function() {
-        if ($(this).find('#main-img').length) {
-              $("#interior-banner .contain").next('#main-img').addBack().wrapAll('<div>').parent().addClass('flex-title');
-        }
-    });
-
+            //////// Takes an image and makes it background image to fill flexed container
+    if (theWindow.width() > 1024) {
+        $("#main-img").each(function() {
+            var mainBkg = $(this).find("img").attr("src");
+                    $(this).css({
+                        'background-image': 'url(' + mainBkg + ')',
+                        'background-size': 'cover',
+                        'background-repeat': 'no-repeat',
+                        'background-position': 'top center',
+                    })
+            });
+     }
 
 
     // page title + intro - interior banner
@@ -350,6 +347,18 @@ $(function () {
 
    $("#intro").appendTo("#interior-banner .contain")
 
+       ///// Takes main banner image on page and flexes with page title
+       $("#main-img").appendTo("#interior-banner .contain")
+       $("#main-img").appendTo("#interior-banner")
+       $('#interior-banner').each(function() {
+           if ($(this).find('#main-img').length) {
+               $("#interior-banner #page-title").next('#intro').addBack().wrapAll('<div>')
+                 $("#interior-banner .contain").next('#main-img').addBack().wrapAll('<div>').parent().addClass('flex-title');
+           }
+       });
+   
+
+       
     //////////  Adding interior banner videos
     // $('#page-title').each(function() {
     //     if ($(this).find('.play').length) {
@@ -368,7 +377,6 @@ $(function () {
         bodyPlaying: null,
         mobileWidth: 1000,
         animate: true,
-        // mobileAppendPlay: '#banner article'
         closeButtonString: '<button class="close" aria-label="close video"><i class="icon-plus"></i> Close Video</button>'
     });
 
@@ -376,6 +384,14 @@ $(function () {
         $('#banner .play').appendTo('#banner [data-embed]')
     }
 
+    $(".modal-content[data-player]").tntvideos({
+        playButton: '.yt-play',
+        closeButton: '.close',
+        animate: true,
+        mobileWidth: 1000
+    });
+
+    
     $("#testimonials[data-player]").tntvideos({
         playButton: '.play',
         closeButton: '.close',
@@ -439,7 +455,7 @@ $(function () {
          },
     }); 
     //prevent validator on slider form
-    $('footer .forms input').on('invalid', function(e) { e.preventDefault(); });
+    $('.slick-form input').on('invalid', function(e) { e.preventDefault(); });
 
 
     var $status = $('.gallery .pagingInfo');

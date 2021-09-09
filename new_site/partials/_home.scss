@@ -8,7 +8,7 @@
         figure {margin: 0;}
     }
 }
-@media(max-width: 900px) {
+@media(max-width: 1000px) {
     #banner article {position: relative; transform: none; left: 0; top: 0;}
     #banner .play {cursor: pointer; position: absolute; top: 50%; left: 50%;  transform: translate(-50%, -50%); }
 }
@@ -32,9 +32,8 @@
 
 
 /* ----------- Reviews ----------- */
-#reviews {position: relative;  margin: 50px auto;  padding: 30px 10px; text-align: center;
-    .slick-reviews {margin: 30px auto;  max-width: 800px; 
-        .slick-list { background-color: #ebebeb;}
+#reviews {position: relative;  margin: 50px auto;  padding: 30px 10px; text-align: center; max-width: 1300px;
+    .slick-reviews {margin: 30px auto;  max-width: 700px; 
         .slick-slide {  padding: 10px; margin: 10px 30px; }
     }
     .slick-track {align-items: center;     display: flex; }
@@ -46,8 +45,8 @@
 }
 @media(min-width: 1001px) {
    #reviews {
-       .slick-track { overflow: visible !important;}
-        .slick-slide {opacity: .5;
+       .slick-list { overflow: visible !important;}
+        .slick-slide {opacity: .3;
             &.slick-current {opacity: 1;}
         }
    }

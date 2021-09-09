@@ -14,11 +14,19 @@ h1, h2, h3, h4, h5, h6 {margin: 0; position: relative;}
 #page-title h1:only-child, h2#append, .h1 {color: $text; font: 700 60px/1 $font2; }
 h2, .h2, .dividerLead, .more-to-explore span {color: $text; font: 700 40px/1 $font2; position: relative;}
 h3, .h3 {color: $text; display: block; position: relative; font: 400 30px/1.1 $font2; text-transform: uppercase;  }
-.h4, .toggle h2, .toggle h3 {color: $text; display: block; position: relative; font: 400 24px/1.25 $font;  }
-.more-to-explore span {color: #fff; }
+h4, .h4 {color: $text; display: block; position: relative; font: 700 20px/1.1 $font; text-transform: uppercase;  }
+.toggle h2, .toggle h3 {color: $text; display: block; position: relative; font: 400 24px/1.25 $font;  }
 .fo-title {color: $primary; font: 700 16px/1 $font2; display: block;  text-transform: uppercase;}
-// .accent:after {display: table; content: ''; width: 25px; height: 3px; background-color: $secondary; margin: 10px auto 20px;}
+#page-title h1, #page-title h1:only-child, h2#append, .more-to-explore span {color: #fff; }
 
+main ul {list-style: none;  padding: 0; margin: 10px 0; text-align: left; overflow: hidden;
+    li {position: relative; display: block; margin: 0 0 10px 26px; padding-left: 24px; line-height: 1.6; overflow: hidden;}
+    li:before {content: '\e832'; color: $primary; position: absolute; left: 0; top: 3px; font-size:.9em;}
+    ul li { padding-left: 15px;
+        &:before {content:''; background-color: $primary; width: 6px; height: 6px; border-radius: 50%; top: 10px;}
+    }
+}
+// .accent:after {display: table; content: ''; width: 25px; height: 3px; background-color: $secondary; margin: 10px auto 20px;}
 
 /* ------------- Buttons -------------- */
 [class^="btn"] {position: relative; z-index: 1; display:inline-block; vertical-align: middle; cursor: pointer; text-align: center; transition: .3s all; font: 400 16px/1.2 $font; color: #fff; text-transform: uppercase;  min-width: 285px; margin: 10px; padding: 10px;  background-color: $primary; 

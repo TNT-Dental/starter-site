@@ -2,10 +2,10 @@
 
 #fixed-tabs {position: fixed; right: 0; text-align: center; line-height: 1; font-size: 0;z-index:200; padding: 0;
     li {flex: 1;}
-    a {display: block; font-size: 14px; font-weight: 700; color: #fff; position: relative; overflow: hidden;}
+    a {display: block; font-size: 14px; text-transform: uppercase; font-weight: 700; color: #fff; position: relative; overflow: hidden;}
     i {font-size: 16px} #fixed-tabs i, #fixed-tabs i:before { display: block; margin: 0 auto!important}
-    .ra { background-color: darken($primary, 10%);}
-    .call {background-color: darken($secondary, 10%);}
+    .ra { background-color: darken($primary, 5%);}
+    .call {background-color: darken($secondary, 5%);}
     .map, .fr {background-color: $text;}
     .fb {background-color: $facebook;}
     .gg {background-color: $google;}

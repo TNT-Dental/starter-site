@@ -5,10 +5,6 @@
 .page_index .internal {display: none;}
 .center {text-align: center;}
 main {overflow: hidden}
-main ul {list-style: none;  padding: 0; margin: 10px 0; text-align: left; overflow: hidden;
-    li {position: relative; display: block; margin: 0 0 10px 26px; padding-left: 24px; line-height: 1.6; overflow: hidden;}
-    li:before {content: '\e832'; color: $primary; position: absolute; left: 0; top: 0; font-size:.9em;}
-}
 @media (min-width:800px) {
     ul.two {-webkit-column-count: 2;column-count: 2;}
 }
@@ -19,29 +15,30 @@ main ul {list-style: none;  padding: 0; margin: 10px 0; text-align: left; overfl
 
 
 /* ------------- Internal Title -------------- */
-#interior-banner {  display: flex; flex-direction: column; justify-content: center; position: relative; text-align: center;
-    .contain {max-width: 1200px; margin: auto; width: 100%; flex: 0 1 50%; padding: 50px 20px; }
-    background: rgba(0,0,0,0.1);
-    .flex-title {text-align: left; max-width: 1500px; margin: auto;
-        .contain {max-width: 45%; margin: auto;}
+#interior-banner {  display: flex; flex-direction: column; justify-content: center; position: relative; text-align: center; 
+    &:before {content: ''; position: absolute; left: 0; right: 0; top: 0; bottom: 0;  background: rgba(0,0,0,0.3);}
+    .contain {max-width: 1150px; margin: auto; width: 100%;  padding: 50px 20px;  position: relative; z-index: 1;}
+ 
+}
+.flex-title {height: 100%; margin: auto; width: 100%;
+    #page-title {  margin: auto;}
+    .contain {flex: 0 1 50%;text-align: left;
+        > div {max-width: 600px; margin: auto;}
     }
 }
-#page-title {  position: relative; margin: auto;}
-.flex-title {height: 100%;
-   
-    #page-title {text-align: left;  margin: auto;}
+#intro {  margin: 0 auto; 
+    p, li {color: #fff;}
 }
-#intro {  margin: 0 auto; }
-#main-img {flex: 0 1 50%; align-self: stretch;min-height: 500px;
+#main-img {flex: 0 1 50%; align-self: stretch;min-height: 700px;
     img {display: none;}
 }
-
+#static-banner {display: none;}
 
 /* ------------- Landing -------------- */
 .landing {
     display: flex; align-items: flex-start; justify-content: space-around; flex-wrap: wrap; margin: 40px auto;
-    a {flex: 0 1 30%; margin: 10px auto 20px; text-align: center;
-        h3 {padding: 10px; background-color: $primary; color: #fff; font: 400 15px/1 $font2; text-transform: none; transition: .3s all;}
+    a {flex: 0 1 30%; margin: 10px auto 20px; text-align: center; display: table; max-width: 350px;
+        h3 {padding: 10px; background-color: $primary; color: #fff; font: 400 15px/1 $font2; transition: .3s all;}
         &:hover h3 {background-color: $secondary; color: #fff;}
     }
 }

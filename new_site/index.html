@@ -160,6 +160,21 @@
                 </a>
             </section>
 
+            <a href="#testimony1" rel="leanModal" class="test-vid">
+                <div>
+                    <img src="assets/images/index-testimony-1.jpg" class="thumbnail" alt="youtube video">
+                    <div class="yt-play"><i class="icon-youtube-play"></i> </div>
+                </div>
+            </a>
+            
+            <!-- Video Modal -->
+            <section id="testimony1" class="modal-content" data-player="youtube" >
+                <div data-embed="6JmOftm18NA" data-width="560" data-height="315">
+                    <img alt="youtube thumbnail" class="thumbnail" src="https://img.youtube.com/vi/hlWiI4xVXKY/maxresdefault.jpg">
+                    <button class="yt-play" aria-label="play video"><i class="icon-youtube-play"></i> </button>
+                </div>
+          </section>
+          
             <!--  Modal    -->
             <section id="sp-implant" class="modal-content">
                 <h3 class="h3">Special Offer Title</h3>
@@ -184,12 +199,12 @@
                     <div class="fo-title">Have Questions? <span>Get Answers.</span></div>
                         <form action="" class="forms" method="post">
                             <div class="slick-form">
-                                <div class="input"><input name="name" placeholder="Enter Your Name" required="true" type="text" /><button class="next">Next </button></div>										
-                                <div class="input"><input name="Phone" placeholder="Phone Number" type="text" maxlength="14" /><button class="next">Next </button></div>
-                                <div class="input"><input name="email" placeholder="Email Address" required="true" type="email" /><button class="next">Next </button></div>
+                                <div class="input"><input name="name" placeholder="Enter Your Name" required="true" type="text"/><button class="next" type="button">Next </button></div>
+                                <div class="input"><input name="Phone" placeholder="Phone Number" type="text" maxlength="14"/><button class="next" type="button">Next </button></div>
+                                <div class="input"><input name="email" placeholder="Email Address" required="true" type="email" /><button class="next" type="button">Next </button></div>
                                 <div class="input">
-                                    <textarea name="question" class="fields" placeholder="Questions/Comments"></textarea>	
-                                    <button class="next btn-thr">Submit</button>
+                                    <textarea name="question" class="fields" placeholder="Questions/Comments" autocomplete="off"></textarea>	
+                                    <button class="next btn-thr"  type="submit">Submit</button>
                                 </div>
                             </div>
                             <input name="_subject" value="Ask Question Footer Form" type="hidden" />

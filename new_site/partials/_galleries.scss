@@ -2,11 +2,11 @@
 .slick-controls { display: flex; align-items: center; justify-content: space-around; max-width: 1000px; margin: 10px auto;;}
 
 /* ------------- Arrows -------------- */
-.slick-arrow {color: $primary; font-family: fontello; font-size:40px; position: absolute; top: 50%;  transform: translateY(-50%); left: 5px;  width: 60px; height: 60px; flex: 0 0 60px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-radius: 50%; border: 1px solid $primary;
+.slick-arrow {color: $primary; font-family: fontello; font-size:40px; position: absolute; top: 50%;  transform: translateY(-50%); left: 0;  width: 60px; height: 60px; flex: 0 0 60px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-radius: 50%; border: 1px solid $primary;  transition: .3s all;
     i {margin-left: -4px;}
     &:hover { color: $secondary;  } 
 }
-#next {left: auto; right: 5px; order: 2; i {margin-left: 4px;} }
+#next {left: auto; right: 0; order: 2; i {margin-left: 4px;} }
 
 
 /* ------------- Pagers -------------- */
@@ -14,15 +14,15 @@
     li {line-height: 1;
         button {padding: 0;}
     }
-    span, a {
+    span {
         cursor: pointer; background-color: $tertiary;
         height: 12px; width: 12px; border-radius: 50%;display: inline-block;  margin: 0 5px; opacity: .18;
     }
-    .slick-active span, .slick-active a {
+    .slick-active span {
        opacity: 1;
     }
 }
-.pagingInfo {font-size: 40px;}
+.pagingInfo {font-size: 30px; text-align: center;}
 
 /* ------------- Inside Gallery -------------- */
 .gallery { max-width: 1050px; margin: 40px auto; padding: 0 60px; position: relative;
