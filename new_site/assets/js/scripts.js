@@ -498,3 +498,9 @@ if (theWindow.width() > 1024) {
 
 
 
+$(document).ready(function() {
+    if(window.location.hash) {
+	var tag = $('a[name=' + window.location.hash.substring(1) +']')
+	$(tag)[0].scrollIntoView();
+    }
+}
