@@ -107,7 +107,7 @@ star:before {content: '\e80f \e80f \e80f \e80f \e80f'; color: #f4bd17;}
 
 /*==================== 6. Modals ================*/
 #lean_overlay {padding: 10px; position: fixed; z-index:1100; top: 0; left: 0; height:100%; width:100%; background: rgba(0,0,0,.9); display: none; -webkit-box-pack:center; -ms-flex-pack:center; justify-content:center; -webkit-box-align:center; -webkit-align-items:center; -ms-flex-align:center; -ms-grid-row-align:center; align-items:center; overflow: scroll; }
-.modal-content { display: none; -webkit-box-flex: 0;-ms-flex: 0 1 97%;flex: 0 1 97%; background: rgb(237, 237, 237); max-width: 900px;-webkit-box-sizing: border-box; box-sizing: border-box; position: relative;text-align: center;  width: 95%;}
+.modal-content { display: none; -webkit-box-flex: 0;-ms-flex: 0 1 97%;flex: 0 1 97%; background: rgb(237, 237, 237); max-width: 900px;-webkit-box-sizing: border-box; box-sizing: border-box; position: relative;text-align: center;  width: 95%;  max-height: calc(100vh - 110px);overflow-y: scroll;}
 .modal-content[data-player] img {width: 100%;}
 .modal-close { position: absolute; right:0; top:0px; z-index:102; cursor:pointer; width: 40px; height: 40px; display: flex; align-items: center;justify-content: center; text-align: center; font-size: 40px; line-height: auto; }
 .modal-close i { position: relative; color:#555; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; font-style: normal;    margin-bottom: 5px;}
