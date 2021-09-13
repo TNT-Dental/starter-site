@@ -2,7 +2,7 @@
 .slick-controls { display: flex; align-items: center; justify-content: space-around; max-width: 1000px; margin: 10px auto;;}
 
 /* ------------- Arrows -------------- */
-.slick-arrow {color: $primary; font-family: fontello; font-size:40px; position: absolute; top: 50%;  transform: translateY(-50%); left: 0;  width: 60px; height: 60px; flex: 0 0 60px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-radius: 50%; border: 1px solid $primary;  transition: .3s all;
+.slick-arrow {color: $primary; font-family: fontello; font-size:40px; position: absolute; top: 50%;  transform: translateY(-50%); left: 0;  width: 60px; height: 60px; flex: 0 0 60px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-radius: 50%; border: 1px solid $primary; z-index: 5;  transition: .3s all;
     i {margin-left: -4px;}
     &:hover { color: $secondary;  } 
 }
@@ -10,7 +10,7 @@
 
 
 /* ------------- Pagers -------------- */
-.slick-dots  {line-height: 1; margin-top: 10px;
+.slick-dots  {line-height: 1;
     li {line-height: 1;
         button {padding: 0;}
     }
@@ -26,7 +26,7 @@
 
 /* ------------- Inside Gallery -------------- */
 .gallery { max-width: 1050px; margin: 40px auto; padding: 0 60px; position: relative;
-    .slick-arrow {top: 45%;}
+    .slick-arrow {top: 50%;}
 }
 
 .slick-gallery {position: relative; margin: 20px auto; text-align: center;

@@ -12,7 +12,7 @@
 
 
 /* ------------- Page Divider -------------- */
-.page-divider {display: block; max-width: 100%; width: 100%; position: relative; z-index: 1; margin-top: 40px;}
+.page-divider {display: block; max-width: 100%; width: 100%; position: relative; z-index: 1; }
 .block {position: relative; display: table; clear: both; width: 100%; max-width: 100%; padding: 60px 10px;
     &:before {content: ''; position: absolute; left: -1000px; right: -1000px; top: 0; bottom: 0; z-index: -1;}
     .contain { display: flex; justify-content: space-around; align-items: flex-start;}
@@ -43,8 +43,8 @@
 
 
 /* ------------- Services -------------- */
-.services-grid { max-width: 1180px; margin: 40px auto; display: flex; align-items: stretch; flex-wrap: wrap; flex-wrap: wrap;
-    > div {flex: 0 1 32%;  padding: 0 15px; margin: 10px auto;}
+.services-grid { position: relative; margin: 40px auto; display: flex; align-items: stretch; flex-wrap: wrap; flex-wrap: wrap;
+    > div {flex: 0 1 32%;  margin: 10px auto;}
     h3 {display: block; text-align: center; line-height: 1.1; 
         a {color: $text;}
         span {display: block; font-size: 18px; } 

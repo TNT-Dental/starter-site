@@ -10,7 +10,9 @@
             .slick-arrow {position: relative; transform: none; top: auto; }
         }
 
-        
+        .bkg-img {
+            figure {display: block;}
+        }
     /* ------------- FOOTER  768 -------------- */
         #find {display: block;}
         #map {height: 400px;}

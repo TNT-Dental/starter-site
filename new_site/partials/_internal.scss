@@ -18,7 +18,9 @@ main {overflow: hidden}
 #interior-banner {  display: flex; flex-direction: column; justify-content: center; position: relative; text-align: center; 
     &:before {content: ''; position: absolute; left: 0; right: 0; top: 0; bottom: 0;  background: rgba(0,0,0,0.3);}
     .contain {max-width: 1150px; margin: auto; width: 100%;  padding: 50px 20px;  position: relative; z-index: 1;}
- 
+    #intro {
+        p, li {color: #fff;}
+    }
 }
 .flex-title {height: 100%; margin: auto; width: 100%;
     #page-title {  margin: auto;}
@@ -26,9 +28,7 @@ main {overflow: hidden}
         > div {max-width: 600px; margin: auto;}
     }
 }
-#intro {  margin: 0 auto; 
-    p, li {color: #fff;}
-}
+#intro {  margin: 0 auto;  }
 #main-img {flex: 0 1 50%; align-self: stretch;min-height: 700px;
     img {display: none;}
 }

@@ -106,7 +106,7 @@ $(function () {
       });
   // Closing popup modal turns off video
     $(".modal-close").on("click", function(){
-        for (var i = 0; i < $('.modal-content frame').length; i++) {
+        for (var i = 0; i < $('.modal-content iframe').length; i++) {
           var video = $('.modal-content iframe').attr("src");
           var video = video.replace("autoplay=1", "autoplay=0") ;
           $('.modal-content iframe').attr("src","");
@@ -217,7 +217,7 @@ $(function () {
 
     ////////////////////////////// page divider
     var dividerStart = "> h2, .page-divider .wrap",
-        mobileWidth = 1024;
+        mobileWidth = 1025;
     $.when(setupServices()).done(function () {});
        function setupServices() {
 
@@ -267,22 +267,23 @@ $(function () {
 
 
     $(".mini-block").each(function (index) {
-        if ($(this).closest('.block').find('.elem-left').length) {
-            $(this)
-            .find('h3')
-            .next(".elem-sm")
-            .addClass('elem-left')
-        } else {
-            $(this)
+        if ($(this).closest('.block').find('.elem-right').length) {
+            $(this).addClass('rt')
             .find('h3')
             .next(".elem-sm")
             .addClass('elem-right')
+        } else {
+            $(this).addClass('lf')
+            .find('h3')
+            .next(".elem-sm")
+            .addClass('elem-left')
         }
 
         if ($(window).width() >= mobileWidth) {
             $(this).children(".elem-sm").insertBefore($(this).children("h3"));
         }
     })
+
 
     ///////////// wraps text & .btn in article after .block .elem
     $(".block .elem + *, .block .wrap, .mini-block h3").each(function () { //auto wrap
@@ -310,23 +311,23 @@ $(function () {
     //           $('.more-to-explore').addClass("bkgrd");
     //       }
 
-    
-  //////// Takes data-image source and makes it background image to fill flexed container
-     ////// ie:  <div class="bkg-img" data-img="assets/images/callout-1.jpg">
-       /*
-        $(".bkg-img").each(function() {
-            var bkgImg = $(this).data("img");
+if (theWindow.width() > 1024) {
+
+     $(".bkg-img").each(function() {
+            var bkgImg = $(this).find("figure img").attr("src");
             $(this).css({
                 'background-image': 'url(' + bkgImg + ')',
                 'background-size': 'cover',
                 'background-repeat': 'no-repeat',
-                'background-position': 'center center'
+                'background-position': 'center center',
+                'background-attachment': 'fixed'
             })
         })
-      */
+    }
 
-            //////// Takes an image and makes it background image to fill flexed container
+
     if (theWindow.width() > 1024) {
+
         $("#main-img").each(function() {
             var mainBkg = $(this).find("img").attr("src");
                     $(this).css({

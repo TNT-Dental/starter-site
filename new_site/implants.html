@@ -19,30 +19,33 @@
 <body>
 
 
-<header>
-    <div id="hd-contents" class="place-nav">
-        <a class="logo" href="index.html">
-            <img alt="logo" src="assets/images/logo.png"/>
-        </a>
-        <div class="hd-info">
-            <a href="" class="phy" target="_blank"><i class="icon-location"></i>123 N Street, Richardson, TX 75080 </a>
-            <a href="tel:+1" class="pho"><i class="icon-phone"></i>(626) 289-6131</a>
+    <header>  
+        <div class="skip-link"> <a href='#main' id="main-link">Skip to Main Content</a> </div>
+        <div id="hd-top"></div>
+        <div id="hd-contents" class="place-nav">
+            <a class="logo" href="index.html" aria-label="home page">
+                <img alt="logo" src="assets/images/logo.png"/>
+            </a>
+            <div class="hd-info">
+                <a href="" class="phy" target="_blank"><i class="icon-location"></i>123 N Street, Richardson, TX 75080 </a>
+                <a href="tel:+1" class="pho"><i class="icon-phone"></i>(555) 555-5555</a>
+            </div>
+
+            <div class="hd-btns">
+                <a href="request-an-appointment.html" class="btn ra"><span>Request an </span> Appointment</a>
+                <a href="" class="btn-alt of">Offers</a>
+                <a href="" class="btn-thr fm">Forms</a>
+            </div>
         </div>
 
-        <div class="hd-btns">
-            <a href="request-an-appointment.html" class="btn ra"><span>Request an </span> Appointment</a>
-            <a href="" class="btn-alt of">Offers</a>
-            <a href="" class="btn-thr fm">Forms</a>
-        </div>
+        <nav id="main-nav" tabindex="-1">
+            <!-- [cms:buildNav start=null levels=*][level]<ul>[item]<li><a href="$pageURL$" title="$hrefTitle$">$pageName$</a></li>[/item]</ul>[/level][/cms:buildNav] -->
+            <ul><li><a href="index.html" title="">Home</a></li><li><a href="" title="">About Us</a><ul><li><a href="" title="">Why Choose Us?</a></li><li><a href="meet-the-dentists.html" title="">Meet the Dentists</a><ul><li><a href="meet-the-dentists.html" title="">Dr. Jane Doe</a></li></ul></li></ul></li><li><a href="services.html" title="">Our Services</a><ul><li><a href="implants.html" title="">Dental Implants</a></li><li><a href="emergency.html" title="">Emergency Dentistry</a></li><li><a href="" title="">Restorative Dentistry</a></li><li><a href="" title="">Implants</a><ul><li><a href="implants.html" title="">Preventative</a><ul><li><a href="" title="">Cost of Dental Implants</a></li></ul></li><li><a href="">Bridges</a></li></ul></li><li><a href="" title="">Cosmetic Dentistry</a></li><li><a href="" title="">Orthodontics</a><ul><li><a href="" title="">Invisalign® Clear Braces</a></li></ul></li><li><a href="" title="">Technology & Comforts</a><ul><li><a href="" title="">Sedation Dentistry</a></li></ul></li></ul></li><li><a href="" title="">For Patients</a><ul><li><a href="" title="">New Patient Info</a><li><a href="" title="">Special Offers</a></li><li><a href="" title="">FAQs</a></li></li></ul></li><li><a href="" title="">Dental Insurance</a></li><li><a href="" title="">Reviews</a></li><li><a href="contact.html" title="">Contact</a><ul><li><a href="" title="">Request an Appointment</a></li></ul></li></ul>
 
-    </div>
-    <nav id="main-nav" tabindex="-1">
-        <!-- [cms:buildNav start=null levels=*][level]<ul>[item]<li><a href="$pageURL$" title="$hrefTitle$">$pageName$</a></li>[/item]</ul>[/level][/cms:buildNav] -->
-        <ul><li><a href="index.html" title="">Home</a></li><li><a href="" title="">About Us</a><ul><li><a href="" title="">Why Choose Us?</a></li><li><a href="meet-the-dentists.html" title="">Meet the Dentists</a><ul><li><a href="meet-the-dentists.html" title="">Dr. Jane Doe</a></li></ul></li></ul></li><li><a href="services.html" title="">Our Services</a><ul><li><a href="implants.html" title="">Dental Implants</a></li><li><a href="emergency.html" title="">Emergency Dentistry</a></li><li><a href="" title="">Restorative Dentistry</a></li><li><a href="" title="">Implants</a><ul><li><a href="implants.html" title="">Preventative</a><ul><li><a href="" title="">Cost of Dental Implants</a></li></ul></li><li><a href="">Bridges</a></li></ul></li><li><a href="" title="">Cosmetic Dentistry</a></li><li><a href="" title="">Orthodontics</a><ul><li><a href="" title="">Invisalign® Clear Braces</a></li></ul></li><li><a href="" title="">Technology & Comforts</a><ul><li><a href="" title="">Sedation Dentistry</a></li></ul></li></ul></li><li><a href="" title="">For Patients</a><ul><li><a href="" title="">New Patient Info</a><li><a href="" title="">Special Offers</a></li><li><a href="" title="">FAQs</a></li></li></ul></li><li><a href="" title="">Dental Insurance</a></li><li><a href="" title="">Reviews</a></li><li><a href="contact.html" title="">Contact</a><ul><li><a href="" title="">Request an Appointment</a></li></ul></li></ul>
-
-    </nav>
-</header>
-        
+        </nav>
+    </header>
+   
+    
 <main class="clearfix" role="main" id="main" tabindex="-1">
     <section class="internal clearfix">
         <div id="interior-banner">
@@ -147,8 +150,9 @@
             <div class="more-to-explore">
                 <span>More to Explore</span>
                 <p>
-                    <a class="btn" href="general-family-dentistry.html">I Need a Checkup &amp; Cleaning</a> <a class="btn" href="emergency-dentistry.html">I am in Pain/Had an Accident</a> <a class="btn" href="replace-missing-teeth.html">I am Missing One or More Teeth</a> <a class="btn" href="cosmetic-dentistry.html">I Want a Prettier Smile</a> <a class="btn" href="orthodontics.html">I Want a Straighter Smile</a> <a class="btn-alt" href="services.html">View Our Services</a></p>
-            </div> 
+                    <a class="btn" href="preventive-dentistry.html">I Need a Checkup &amp; Cleaning</a> <a class="btn" href="gum-disease-treatment.html">I am Concerned About Bleeding Gums</a> <a class="btn" href="restorative-dentistry.html">I Have a Cavity or Broken Tooth</a> <a class="btn" href="missing-teeth.html">I am Missing One or More Teeth</a> <a class="btn" href="cosmetic-dentistry.html">I Want to Enhance My Smile</a> <a class="btn" href="orthodontics.html">I Want a Straighter Smile</a> <a class="btn" href="sedation-dentistry.html">I am Scared of the Dentist</a> <a class="btn-alt" href="our-services.html">View Our Services</a></p>
+            </div>
+            
 
         </div> <!-- end of page -->
     </section>  <!-- end of internal -->

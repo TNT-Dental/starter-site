@@ -74,7 +74,7 @@ footer { background-color: #16191a; color: #fff;
 #fo-contents {display: flex; justify-content: space-around;  margin: auto; position: relative; max-width: 1350px; padding: 50px 10px; }
 .fo-info {flex: 0 1 auto;}
 
-#copy { font: 400 15px/1.5 $font; color: #fff;  padding: 20px 0; text-align: center;
+#copy { font: 400 15px/1.5 $font; color: #fff;  padding: 20px 10px; text-align: center;
     a {color: #fff;
         &:nth-of-type(1), &:nth-of-type(2) {color:  $secondary; }
         &:hover  {color: $primary;}
