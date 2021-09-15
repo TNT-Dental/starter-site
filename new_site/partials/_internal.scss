@@ -29,9 +29,7 @@ main {overflow: hidden}
     }
 }
 #intro {  margin: 0 auto;  }
-#main-img {flex: 0 1 50%; align-self: stretch;min-height: 700px;
-    img {display: none;}
-}
+#main-img {flex: 0 1 auto; }
 #static-banner {display: none;}
 
 /* ------------- Landing -------------- */

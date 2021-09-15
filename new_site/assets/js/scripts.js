@@ -305,6 +305,13 @@ $(function () {
             $(this).nextUntil('.block').addBack().wrapAll('<article>');
         });
 
+
+        if(window.location.hash) {
+            var tag = $('a[name=' + window.location.hash.substring(1) +']')
+            $(tag)[0].scrollIntoView();
+        }
+
+
     /////////// If needed to change explore section if page divider ends with odds
     //   $(".page-divider .block:nth-of-type(odd):last-child").parent(".page-divider").addClass('has_oddlast');
     //     if ($(".page-divider").hasClass("has_oddlast")) {
@@ -326,18 +333,18 @@ if (theWindow.width() > 1024) {
     }
 
 
-    if (theWindow.width() > 1024) {
+    // if (theWindow.width() > 1024) {
 
-        $("#main-img").each(function() {
-            var mainBkg = $(this).find("img").attr("src");
-                    $(this).css({
-                        'background-image': 'url(' + mainBkg + ')',
-                        'background-size': 'cover',
-                        'background-repeat': 'no-repeat',
-                        'background-position': 'top center',
-                    })
-            });
-     }
+    //     $("#main-img").each(function() {
+    //         var mainBkg = $(this).find("img").attr("src");
+    //                 $(this).css({
+    //                     'background-image': 'url(' + mainBkg + ')',
+    //                     'background-size': 'cover',
+    //                     'background-repeat': 'no-repeat',
+    //                     'background-position': 'top center',
+    //                 })
+    //         });
+    //  }
 
 
     // page title + intro - interior banner
@@ -494,13 +501,7 @@ if (theWindow.width() > 1024) {
     }); 
 
 
+
 });   /*end of videos & slider function */
 
 
-
-$(document).ready(function() {
-    if(window.location.hash) {
-	var tag = $('a[name=' + window.location.hash.substring(1) +']')
-	$(tag)[0].scrollIntoView();
-    }
-}

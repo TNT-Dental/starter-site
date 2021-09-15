@@ -5,7 +5,7 @@
     .play {position: relative; transform: none; left: auto; top :auto;}
     &.playing {z-index: 100;
         article {position: relative; transform: none; left: 0; top: 0;}
-        figure {margin: 0;}
+        figure {margin: 0 auto; max-width: 1500px;}
     }
 }
 @media(max-width: 1000px) {
