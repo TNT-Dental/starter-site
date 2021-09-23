@@ -87,8 +87,8 @@ $(function () {
 
 
 //// Prepends + appends Close button to popups modals - gives keyboard focus easier access to close button.
-  $(".modal-content").prepend('<button class="modal-close" aria-label="close popup"><i></i><span>Close Popup</span></button>');
-  $(".modal-content").append('<button class="modal-close" aria-label="close popup"><i></i><span>Close Popup</span></button>');
+$(".modal-content").prepend('<button class="modal-close" aria-label="close popup"><svg xmlns="http://www.w3.org/2000/svg" width="18.385" height="18.385" viewBox="0 0 18.385 18.385"><g id="Group_2628" data-name="Group 2628" transform="translate(-1055.307 -6754.308)"><line id="Line_259" data-name="Line 259" x2="24" transform="translate(1056.015 6771.985) rotate(-45)" fill="none" stroke="#1b322c" stroke-linecap="round" stroke-width="1"/><line id="Line_260" data-name="Line 260" x2="24" transform="translate(1056.015 6755.015) rotate(45)" fill="none" stroke="#1b322c" stroke-linecap="round" stroke-width="1"/></g></svg><span>Close Popup</span></button>');
+$(".modal-content").append('<button class="modal-close" aria-label="close popup"><svg xmlns="http://www.w3.org/2000/svg" width="18.385" height="18.385" viewBox="0 0 18.385 18.385"><g id="Group_2628" data-name="Group 2628" transform="translate(-1055.307 -6754.308)"><line id="Line_259" data-name="Line 259" x2="24" transform="translate(1056.015 6771.985) rotate(-45)" fill="none" stroke="#1b322c" stroke-linecap="round" stroke-width="1"/><line id="Line_260" data-name="Line 260" x2="24" transform="translate(1056.015 6755.015) rotate(45)" fill="none" stroke="#1b322c" stroke-linecap="round" stroke-width="1"/></g></svg><span>Close Popup</span></button>');
 
 
 //// Clicking popup moves keyboard focus into modal 
@@ -306,12 +306,6 @@ $(function () {
         });
 
 
-        if(window.location.hash) {
-            var tag = $('a[name=' + window.location.hash.substring(1) +']')
-            $(tag)[0].scrollIntoView();
-        }
-
-
     /////////// If needed to change explore section if page divider ends with odds
     //   $(".page-divider .block:nth-of-type(odd):last-child").parent(".page-divider").addClass('has_oddlast');
     //     if ($(".page-divider").hasClass("has_oddlast")) {
@@ -505,3 +499,96 @@ if (theWindow.width() > 1024) {
 });   /*end of videos & slider function */
 
 
+$(document).ready(function() {
+    if(window.location.hash) {
+	var tag = $('a[name=' + window.location.hash.substring(1) +']')
+	$(tag)[0].scrollIntoView();
+    }
+});
+
+/* cool form */
+
+if(!String.prototype.trim){(function(){var rtrim=/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;String.prototype.trim=function(){return this.replace(rtrim,'')}})()}[].slice.call(document.querySelectorAll('.input__field')).forEach(function(inputEl){if(inputEl.value.trim()!==''){classie.add(inputEl.parentNode,'input--filled')}
+
+inputEl.addEventListener('focus',onInputFocus);inputEl.addEventListener('blur',onInputBlur)});function onInputFocus(ev){classie.add(ev.target.parentNode,'input--filled')}
+
+function onInputBlur(ev){if(ev.target.value.trim()===''){classie.remove(ev.target.parentNode,'input--filled')}}
+
+'use strict';function classReg(className){return new RegExp("(^|\\s+)"+className+"(\\s+|$)")}
+
+var hasClass,addClass,removeClass;if('classList' in document.documentElement){hasClass=function(elem,c){return elem.classList.contains(c)};addClass=function(elem,c){elem.classList.add(c)};removeClass=function(elem,c){elem.classList.remove(c)}}else{hasClass=function(elem,c){return classReg(c).test(elem.className)};addClass=function(elem,c){if(!hasClass(elem,c)){elem.className=elem.className+' '+c}};removeClass=function(elem,c){elem.className=elem.className.replace(classReg(c),' ')}}
+
+function toggleClass(elem,c){var fn=hasClass(elem,c)?removeClass:addClass;fn(elem,c)}
+
+var classie={hasClass:hasClass,addClass:addClass,removeClass:removeClass,toggleClass:toggleClass,has:hasClass,add:addClass,remove:removeClass,toggle:toggleClass};if(typeof define==='function'&&define.amd){define(classie)}else{window.classie=classie}
+
+
+
+
+$(document).ready(function () {
+   
+
+
+    $('.searchable-select').select2();
+
+$('.searchable-select').on('change', function(){
+
+var optionSelected = $("option:selected", this);
+
+  $('#appt-form input[name=insurance]').val(optionSelected.text()).addClass('input--filled');
+
+  $('#appt-form input[name=insurance]').parent().addClass('input--filled');
+
+})
+
+
+
+    var theWindow = $(window);
+      
+    if (theWindow.width() > 749) {
+          $("#appt-form .day").insertAfter(".flex-row-input")
+      }
+ 
+          $("#interests").change(function () {
+              var intList = $('#interests');
+                  if (intList.val() === 'Other') {
+                      $(this).parent().parent().addClass("oth")
+              } else {
+                  $("#int-list").removeClass("oth")
+              }
+          });
+ 
+      $("#submit").click(function () {
+      
+        var list = $('#insureList');
+          if (list.val() === 'out') {
+              $("#in").hide();
+               $("#out").show().addClass('open-in');
+          }
+
+      });
+
+      $("#submit").click(function () {
+          var list = $('#insureList');
+              if (list.val() === 'in') {
+                  $("#out").hide();
+                  $("#in").show().addClass('open-in');
+          }
+      });
+
+      $(".close-ins").click(function () {
+          $('#insureList').val("");
+          $(this).parent().removeClass('open-in').hide()
+          $("#in").hide()
+          $("#out").hide()
+          $(".insure-modal").hide()
+          $("#appt-form").hide()
+       });
+
+
+       $(".btn.now").click(function () {
+          $("#appt-form").show()
+      });
+
+  
+});

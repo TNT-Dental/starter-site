@@ -1,0 +1,242 @@
+
+/* ---------------- Insurance Checker ---------------- */
+.block #insure-form {margin: 10px auto;}
+html {  scroll-behavior: smooth;}
+a.anchor {display: block;position: relative;top: -100px;visibility: hidden;}
+#insure-form { position: relative; max-width: 800px; margin: 50px auto; background-color: $primary; padding: 60px 40px; text-align: center;
+    .h2 {line-height: 1.2; margin: 10px auto ; letter-spacing: 0; font-size: 42px;}
+    .h1 small, .h2, p, .group label {color: #fff;}
+
+    input, select {display: table; width: 100%; margin: 10px auto;  height: 50px; padding: 5px; border: none; border-bottom: 1px solid #fff; background-color: transparent; color: #fff;}
+  
+    ::-webkit-input-placeholder { color: #fff;}
+    :-ms-input-placeholder { color: #fff}
+    ::placeholder {color: #fff;}
+  
+  .select2-container{width: 100% !important; max-width: 620px;}
+  .select2-container--default .select2-selection--single{background-color: transparent; color: #fff; border-radius: 0; border: none; border-bottom: 1px solid #fff; outline: none;}
+  .select2-container--default .select2-selection--single .select2-selection__rendered{color: #fff; text-align: left;;}
+  .select2-container--default .select2-selection--single .select2-selection__arrow b{border-color: #fff transparent transparent transparent;}
+  .select2-container .select2-selection--single{height: 36px;}
+
+    button#submit {border: 1px solid #fff; padding: 20px; border-radius: 30px; text-transform: uppercase; min-width: 250px; margin: 20px auto; background-color: transparent; color: #fff;;
+        &:hover {background-color: $secondary;}
+    }
+  }
+
+ #in, #out {display: none}
+ #insure-help .h2 {font-size: 45px;letter-spacing: .05em; }
+
+.insure-modal { background-color: $primary; 
+    p {margin: 20px auto; max-width: 600px;}
+    .btn {margin: 20px auto 10px; border: 1px solid #fff;}
+}
+  
+.open-in {position: absolute; top: 0; left: 50%; width: 98%; transform: translateX(-50%);  display: flex !important; flex-direction: column; justify-content: center; align-items: center; height: 100%;transition: 3s all;
+}
+
+.close-ins {background-color: transparent; border: 2px solid #fff; border-radius: 50%; color:#fff;  font-size: 30px; position: absolute;; top: 0; right: 0; z-index: 3; flex: 0 0 40px; width: 40px;
+    height: 40px; background-color: darken($primary, 5%);
+    top: -20px; right: -20px; display: flex; justify-content: center; align-items: center; cursor: pointer;
+    span{transform: rotate(45deg); padding: 0 0 4px 2px;}
+    &:before {content: 'Try another insurance'; font-size: 12px; position: absolute; left: -130px; color: $text; top: 0; opacity: .35;}
+    &:hover {background-color: $secondary;
+        &:before {opacity: 1;}
+    }
+}
+
+.yep {
+    width: 80px; height: 80px; flex:0 0 80px; line-height: 1; border: 2px solid #fff; border-radius: 50%; color:#fff;  font-size: 40px; display: flex; justify-content: center; align-items: center; margin: 10px auto;
+    i {margin-top: 5px;}
+}
+
+
+
+/* ---------------- Appointment Form ---------------- */
+
+#appt-form {  display: none; padding: 40px 10px; text-align: left;  max-width: 800px; margin: 10px auto;
+  h2, h3 {text-align: center; margin: 20px auto 50px; letter-spacing: .05em;}
+  h2 {font-size: 45px;}
+  .flex-row-input {display: flex; justify-content: space-around;align-items: flex-start; article {flex: 1; margin: 10px;} }
+
+  .options { color: $text; margin: 0 10px 0;
+    label {display: block; font-size: 18px; position: relative; margin-bottom: 10px; text-align: left;}
+  }
+  .flex-checks { display: flex; flex-wrap: wrap;
+    span {flex: 0 1 30%; margin: 10px 5px 10px 0; display: flex; align-items: center; font-size: 16px;
+      [type=checkbox], [type=radio] {margin-right: 8px;}
+    }
+  }
+    button.btn {display: table; margin: 20px auto !important;}
+  
+
+  ::-webkit-input-placeholder { color: #333; }
+   :-moz-placeholder { color: #333; }
+   ::-moz-placeholder { color: #333; }
+   :-ms-input-placeholder { color: #333; }
+
+   .input-content, .styled-form .inline label, .styled-form .inline, .input--filled .input__label .input__label-content strong, .input--filled .input__label .input__label-content a { color: $text;}
+
+
+  .input-content { position: relative; z-index: 1; border-bottom: 1px solid $primary; display: block; width: 100%; min-height: 65px ; background:none;
+    &.txt {height: 150px;
+
+    
+    }
+
+    textarea { padding: 5px; display: block; width: 100%; height: 130px; display: table; font-family: $font;;}
+
+  }
+  .input__field { 
+    // -webkit-appearance: none; 
+    position: absolute; z-index: 2; display: block; border: none; border-radius: 0; padding: 0 10px; margin-top: 20px; height: 40px; width: 100%; background: transparent; color: $text; }
+
+  .input__label { display: inline-block; padding: 0; width: 100%; height: 100%; position: absolute; background: transparent; text-align: left; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; -webkit-touch-callout: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; 
+    &::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0 solid transparent; -webkit-transition: border-width 0.3s, border-color 0.3s; transition: border-width 0.3s, border-color 0.3s }
+  }
+
+
+  .input__label-content { position: relative; display: block; width: 100%; padding: 40px 10px 10px; text-rendering: geometricPrecision;  transform-origin: 0% 50%; transition: color 0.3s, -webkit-transform 0.3s; transition: transform 0.3s, color 0.3s; transition: transform 0.3s, color 0.3s; color: $text; }
+
+  .input__field:focus+.input__label .input__label-content, .input--filled .input__label .input__label-content { color: $text; -webkit-transform: translate3d(0, -.8em, 0); transform: translate3d(0, -.8em, 0); padding: 15px 5px 5px; font-size: .75em; }
+  input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill { background-color: transparent !important }
+
+
+}
+
+
+.options {
+  [type=checkbox], [type=radio] { -webkit-appearance: none; position: relative;  border-radius: 3px; vertical-align: middle; height: 25px; width: 25px; border: 1px solid $text;}
+
+   [type=radio] { border-radius: 50%; }
+
+    [type=checkbox]:active, [type=checkbox]:checked:active, [type=checkbox]:checked, [type=radio]:active, [type=radio]:checked:active, [type=radio]:checked { background-color: #fff; border: 1px solid $primary;}
+
+    [type=checkbox]:checked:after, [type=radio]:checked:after { font-family: fontello; content: '\e832'; font-size: 13px; position: absolute; top: 4px; left: 4px; color: $primary; }
+  
+    [type=radio]:checked:after { content: ''; width: 14px; height: 14px; background-color: $primary; border-radius: 50%; }
+
+}
+.dwn {position: relative;}
+.dwn:after {
+    position: absolute;
+    content: '\e935';
+    font-family: fontello;
+    font-size: 1.2em;
+    line-height: 1.5;
+    color: $primary;
+    bottom: 5px;
+    right: 10px;
+    z-index: 8;
+    pointer-events: none;
+}
+
+#other-int {display: none; margin: 10px auto; }
+
+#int-list.oth {
+  #other-int {display: block;}
+}
+
+.group {  position:relative;  margin-bottom:20px;
+  input, select, textarea {
+    font-size:18px;
+    padding:10px 10px 10px 5px;
+    display:block;
+    width:100%;
+    border:none;
+    border-bottom:1px solid $primary;
+    background: none;
+    color: $text; height: 45px;
+    -webkit-appearance: none;
+     position: relative;
+  }
+  select:after {position: absolute; right: 5px; top: 5px; content: '\e825'; font-family: fontello; z-index: 5; color: #fff;}
+    textarea {height: 160px;}
+    input:focus, textarea:focus, select:focus { outline:none;  background-color: rgba(0,0,0,0.03);}
+      
+}
+
+
+
+/* BOTTOM BARS ================================= */
+.bar 	{ position:relative; display:block; max-width:100%; position: absolute; bottom: -1px; left: 0; right: 0;}
+.bar:before, .bar:after 	{
+  content:'';
+  height:2px; 
+  width:0;
+  bottom:1px; 
+  position:absolute;
+  background:$primary;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+.bar:before { left:50%; }
+.bar:after { right:50%;  }
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after, 
+textarea:focus ~ .bar:before, textarea:focus ~ .bar:after,
+select:focus ~ .bar:before, select:focus ~ .bar:after 
+{ width:50%; }
+
+/* HIGHLIGHTER ================================== */
+.highlight { position:absolute; height:60%; width:100px; top:25%; left:0; pointer-events:none; opacity:0.5; }
+
+/* active state */
+input:focus ~ .highlight, textarea:focus ~ .highlight, select:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter { from { background:$primary; } to { width:0; background:transparent; } }
+@-moz-keyframes inputHighlighter { from { background:$primary; } to { width:0; background:transparent; } }
+@keyframes inputHighlighter { from { background:$primary; } to { width:0; background:transparent; } }
+
+#insure-help {text-align: center; margin: 40px auto; padding: 10px;}
+
+
+#no-insure {
+  .h2, h3 {text-align: center;}
+}
+
+
+
+
+/* ---------------- Media Queries ---------------- */
+@media(max-width:1000px) {
+    #plan { flex-flow: wrap; justify-content: space-around; 
+       > * { margin-bottom:20px; flex: 0 1 350px; }
+    }
+    #insure-form .h2 br {display: none;}
+  }
+  
+  @media(max-width:750px) {
+    #insure-form {padding: 50px 20px;}
+    #insure-form  .h2, #insure-help .h2{font-size: 36px;}
+    #insure-form .h2 br, #insure-form p br {display: none;}
+    .insure-modal {padding: 0 10px;}
+    #appt-form .flex-row-input {display: block;}
+    #appt-form .options {margin: 10px auto 20px;}
+  
+  }
+  
+  @media(max-width:480px) {
+    #appt-form {padding: 40px 0;
+      .flex-row-input article {margin: 10px auto;}
+      .flex-checks span {flex: 0 1 48%;}
+    }
+    .close-ins {right: -10px;}
+  
+  }
+  @media(max-width:400px) {
+    #insure-form  .h2, #insure-help .h2{font-size: 30px;}
+    #appt-form .input-content, .group input, .group select, .group textarea {font-size: 16px}
+    #insure-form .h2 {font-size: 30px;}
+    .insure-modal .btn {min-width: auto;}
+  }
+  
+  
+  

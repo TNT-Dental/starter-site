@@ -667,6 +667,201 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill { bac
 
 .options [type=radio]:checked:after { content: ''; width: 14px; height: 14px; background-color: #0868b1; border-radius: 50%; }
 
+/* ---------------- Insurance Checker ---------------- */
+.block #insure-form { margin: 10px auto; }
+
+html { scroll-behavior: smooth; }
+
+a.anchor { display: block; position: relative; top: -100px; visibility: hidden; }
+
+#insure-form { position: relative; max-width: 800px; margin: 50px auto; background-color: #0868b1; padding: 60px 40px; text-align: center; }
+
+#insure-form .h2 { line-height: 1.2; margin: 10px auto; letter-spacing: 0; font-size: 42px; }
+
+#insure-form .h1 small, #insure-form .h2, #insure-form p, #insure-form .group label { color: #fff; }
+
+#insure-form input, #insure-form select { display: table; width: 100%; margin: 10px auto; height: 50px; padding: 5px; border: none; border-bottom: 1px solid #fff; background-color: transparent; color: #fff; }
+
+#insure-form ::-webkit-input-placeholder { color: #fff; }
+
+#insure-form :-ms-input-placeholder { color: #fff; }
+
+#insure-form ::-ms-input-placeholder { color: #fff; }
+
+#insure-form ::placeholder { color: #fff; }
+
+#insure-form .select2-container { width: 100% !important; max-width: 620px; }
+
+#insure-form .select2-container--default .select2-selection--single { background-color: transparent; color: #fff; border-radius: 0; border: none; border-bottom: 1px solid #fff; outline: none; }
+
+#insure-form .select2-container--default .select2-selection--single .select2-selection__rendered { color: #fff; text-align: left; }
+
+#insure-form .select2-container--default .select2-selection--single .select2-selection__arrow b { border-color: #fff transparent transparent transparent; }
+
+#insure-form .select2-container .select2-selection--single { height: 36px; }
+
+#insure-form button#submit { border: 1px solid #fff; padding: 20px; border-radius: 30px; text-transform: uppercase; min-width: 250px; margin: 20px auto; background-color: transparent; color: #fff; }
+
+#insure-form button#submit:hover { background-color: #08a9b1; }
+
+#in, #out { display: none; }
+
+#insure-help .h2 { font-size: 45px; letter-spacing: .05em; }
+
+.insure-modal { background-color: #0868b1; }
+
+.insure-modal p { margin: 20px auto; max-width: 600px; }
+
+.insure-modal .btn { margin: 20px auto 10px; border: 1px solid #fff; }
+
+.open-in { position: absolute; top: 0; left: 50%; width: 98%; -webkit-transform: translateX(-50%); transform: translateX(-50%); display: -webkit-box !important; display: -ms-flexbox !important; display: flex !important; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; height: 100%; -webkit-transition: 3s all; transition: 3s all; }
+
+.close-ins { background-color: transparent; border: 2px solid #fff; border-radius: 50%; color: #fff; font-size: 30px; position: absolute; top: 0; right: 0; z-index: 3; -webkit-box-flex: 0; -ms-flex: 0 0 40px; flex: 0 0 40px; width: 40px; height: 40px; background-color: #075a99; top: -20px; right: -20px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; cursor: pointer; }
+
+.close-ins span { -webkit-transform: rotate(45deg); transform: rotate(45deg); padding: 0 0 4px 2px; }
+
+.close-ins:before { content: 'Try another insurance'; font-size: 12px; position: absolute; left: -130px; color: #545454; top: 0; opacity: .35; }
+
+.close-ins:hover { background-color: #08a9b1; }
+
+.close-ins:hover:before { opacity: 1; }
+
+.yep { width: 80px; height: 80px; -webkit-box-flex: 0; -ms-flex: 0 0 80px; flex: 0 0 80px; line-height: 1; border: 2px solid #fff; border-radius: 50%; color: #fff; font-size: 40px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; margin: 10px auto; }
+
+.yep i { margin-top: 5px; }
+
+/* ---------------- Appointment Form ---------------- */
+#appt-form { display: none; padding: 40px 10px; text-align: left; max-width: 800px; margin: 10px auto; }
+
+#appt-form h2, #appt-form h3 { text-align: center; margin: 20px auto 50px; letter-spacing: .05em; }
+
+#appt-form h2 { font-size: 45px; }
+
+#appt-form .flex-row-input { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-pack: distribute; justify-content: space-around; -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; }
+
+#appt-form .flex-row-input article { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; margin: 10px; }
+
+#appt-form .options { color: #545454; margin: 0 10px 0; }
+
+#appt-form .options label { display: block; font-size: 18px; position: relative; margin-bottom: 10px; text-align: left; }
+
+#appt-form .flex-checks { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; }
+
+#appt-form .flex-checks span { -webkit-box-flex: 0; -ms-flex: 0 1 30%; flex: 0 1 30%; margin: 10px 5px 10px 0; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; font-size: 16px; }
+
+#appt-form .flex-checks span [type=checkbox], #appt-form .flex-checks span [type=radio] { margin-right: 8px; }
+
+#appt-form button.btn { display: table; margin: 20px auto !important; }
+
+#appt-form ::-webkit-input-placeholder { color: #333; }
+
+#appt-form :-moz-placeholder { color: #333; }
+
+#appt-form ::-moz-placeholder { color: #333; }
+
+#appt-form :-ms-input-placeholder { color: #333; }
+
+#appt-form .input-content, #appt-form .styled-form .inline label, #appt-form .styled-form .inline, #appt-form .input--filled .input__label .input__label-content strong, #appt-form .input--filled .input__label .input__label-content a { color: #545454; }
+
+#appt-form .input-content { position: relative; z-index: 1; border-bottom: 1px solid #0868b1; display: block; width: 100%; min-height: 65px; background: none; }
+
+#appt-form .input-content.txt { height: 150px; }
+
+#appt-form .input-content textarea { padding: 5px; display: block; width: 100%; height: 130px; display: table; font-family: "Lato", sans-serif; }
+
+#appt-form .input__field { position: absolute; z-index: 2; display: block; border: none; border-radius: 0; padding: 0 10px; margin-top: 20px; height: 40px; width: 100%; background: transparent; color: #545454; }
+
+#appt-form .input__label { display: inline-block; padding: 0; width: 100%; height: 100%; position: absolute; background: transparent; text-align: left; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; -webkit-touch-callout: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+
+#appt-form .input__label::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0 solid transparent; -webkit-transition: border-width 0.3s, border-color 0.3s; transition: border-width 0.3s, border-color 0.3s; }
+
+#appt-form .input__label-content { position: relative; display: block; width: 100%; padding: 40px 10px 10px; text-rendering: geometricPrecision; -webkit-transform-origin: 0% 50%; transform-origin: 0% 50%; transition: color 0.3s, -webkit-transform 0.3s; -webkit-transition: color 0.3s, -webkit-transform 0.3s; transition: transform 0.3s, color 0.3s; transition: transform 0.3s, color 0.3s, -webkit-transform 0.3s; transition: transform 0.3s, color 0.3s; color: #545454; }
+
+#appt-form .input__field:focus + .input__label .input__label-content, #appt-form .input--filled .input__label .input__label-content { color: #545454; -webkit-transform: translate3d(0, -0.8em, 0); transform: translate3d(0, -0.8em, 0); padding: 15px 5px 5px; font-size: .75em; }
+
+#appt-form input:-webkit-autofill, #appt-form textarea:-webkit-autofill, #appt-form select:-webkit-autofill { background-color: transparent !important; }
+
+.options [type=checkbox], .options [type=radio] { -webkit-appearance: none; position: relative; border-radius: 3px; vertical-align: middle; height: 25px; width: 25px; border: 1px solid #545454; }
+
+.options [type=radio] { border-radius: 50%; }
+
+.options [type=checkbox]:active, .options [type=checkbox]:checked:active, .options [type=checkbox]:checked, .options [type=radio]:active, .options [type=radio]:checked:active, .options [type=radio]:checked { background-color: #fff; border: 1px solid #0868b1; }
+
+.options [type=checkbox]:checked:after, .options [type=radio]:checked:after { font-family: fontello; content: '\e832'; font-size: 13px; position: absolute; top: 4px; left: 4px; color: #0868b1; }
+
+.options [type=radio]:checked:after { content: ''; width: 14px; height: 14px; background-color: #0868b1; border-radius: 50%; }
+
+.dwn { position: relative; }
+
+.dwn:after { position: absolute; content: '\e935'; font-family: fontello; font-size: 1.2em; line-height: 1.5; color: #0868b1; bottom: 5px; right: 10px; z-index: 8; pointer-events: none; }
+
+#other-int { display: none; margin: 10px auto; }
+
+#int-list.oth #other-int { display: block; }
+
+.group { position: relative; margin-bottom: 20px; }
+
+.group input, .group select, .group textarea { font-size: 18px; padding: 10px 10px 10px 5px; display: block; width: 100%; border: none; border-bottom: 1px solid #0868b1; background: none; color: #545454; height: 45px; -webkit-appearance: none; position: relative; }
+
+.group select:after { position: absolute; right: 5px; top: 5px; content: '\e825'; font-family: fontello; z-index: 5; color: #fff; }
+
+.group textarea { height: 160px; }
+
+.group input:focus, .group textarea:focus, .group select:focus { outline: none; background-color: rgba(0, 0, 0, 0.03); }
+
+/* BOTTOM BARS ================================= */
+.bar { position: relative; display: block; max-width: 100%; position: absolute; bottom: -1px; left: 0; right: 0; }
+
+.bar:before, .bar:after { content: ''; height: 2px; width: 0; bottom: 1px; position: absolute; background: #0868b1; transition: 0.2s ease all; -moz-transition: 0.2s ease all; -webkit-transition: 0.2s ease all; }
+
+.bar:before { left: 50%; }
+
+.bar:after { right: 50%; }
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after, textarea:focus ~ .bar:before, textarea:focus ~ .bar:after, select:focus ~ .bar:before, select:focus ~ .bar:after { width: 50%; }
+
+/* HIGHLIGHTER ================================== */
+.highlight { position: absolute; height: 60%; width: 100px; top: 25%; left: 0; pointer-events: none; opacity: 0.5; }
+
+/* active state */
+input:focus ~ .highlight, textarea:focus ~ .highlight, select:focus ~ .highlight { -webkit-animation: inputHighlighter 0.3s ease; animation: inputHighlighter 0.3s ease; }
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter { from { background: #0868b1; }
+  to { width: 0;
+    background: transparent; } }
+
+@keyframes inputHighlighter { from { background: #0868b1; }
+  to { width: 0;
+    background: transparent; } }
+
+#insure-help { text-align: center; margin: 40px auto; padding: 10px; }
+
+#no-insure .h2, #no-insure h3 { text-align: center; }
+
+/* ---------------- Media Queries ---------------- */
+@media (max-width: 1000px) { #plan { -ms-flex-flow: wrap; flex-flow: wrap; -ms-flex-pack: distribute; justify-content: space-around; }
+  #plan > * { margin-bottom: 20px; -webkit-box-flex: 0; -ms-flex: 0 1 350px; flex: 0 1 350px; }
+  #insure-form .h2 br { display: none; } }
+
+@media (max-width: 750px) { #insure-form { padding: 50px 20px; }
+  #insure-form .h2, #insure-help .h2 { font-size: 36px; }
+  #insure-form .h2 br, #insure-form p br { display: none; }
+  .insure-modal { padding: 0 10px; }
+  #appt-form .flex-row-input { display: block; }
+  #appt-form .options { margin: 10px auto 20px; } }
+
+@media (max-width: 480px) { #appt-form { padding: 40px 0; }
+  #appt-form .flex-row-input article { margin: 10px auto; }
+  #appt-form .flex-checks span { -webkit-box-flex: 0; -ms-flex: 0 1 48%; flex: 0 1 48%; }
+  .close-ins { right: -10px; } }
+
+@media (max-width: 400px) { #insure-form .h2, #insure-help .h2 { font-size: 30px; }
+  #appt-form .input-content, .group input, .group select, .group textarea { font-size: 16px; }
+  #insure-form .h2 { font-size: 30px; }
+  .insure-modal .btn { min-width: auto; } }
+
 /* --- fixed-tabs --- */
 #fixed-tabs { position: fixed; right: 0; text-align: center; line-height: 1; font-size: 0; z-index: 200; padding: 0; }
 
