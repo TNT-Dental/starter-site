@@ -267,13 +267,18 @@ $(function () {
 
 
     $(".mini-block").each(function (index) {
-        if ($(this).closest('.block').find('.elem-right').length) {
-            $(this).addClass('rt')
+        if ($(this).closest('.block').find('.elem.elem-right').length) {
+            $(this)
             .find('h3')
             .next(".elem-sm")
-            .addClass('elem-right')
+            .addClass(index % 2 ? 'elem-right' : 'elem-left')
+        } else if ($(this).closest('.block').find('.elem.elem-left').length) {
+            $(this)
+            .find('h3')
+            .next(".elem-sm")
+            .addClass(index % 2 ? 'elem-left' : 'elem-right')
         } else {
-            $(this).addClass('lf')
+            $(this)
             .find('h3')
             .next(".elem-sm")
             .addClass('elem-left')
@@ -283,6 +288,7 @@ $(function () {
             $(this).children(".elem-sm").insertBefore($(this).children("h3"));
         }
     })
+    
 
 
     ///////////// wraps text & .btn in article after .block .elem
