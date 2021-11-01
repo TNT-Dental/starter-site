@@ -5,7 +5,7 @@
     h2 {text-align: center; font-size: 30px; }
     ul {display: flex; justify-content: space-around;  align-items: center; text-align: center;   align-items: flex-start;}
     ul li { max-width: 280px;  flex: 1 1 33%; padding: 0; margin: 10px; width: 100%;  color: #fff; overflow: visible;
-        span {max-width: 95%; margin: 0 auto;}
+        span {max-width: 95%; margin: 0 auto; display: block; line-height: 1.2}
     }
     ul li:before  { content: ''; counter-increment: why-section; content: counter(why-section); position: relative; display: flex; justify-content: center; align-items: center; margin: 0 auto 10px; width: 56px; height:54px; border-radius: 50%;  background-color: $primary;  color: #fff; font: 400 30px/1 $font; text-align: center; }
 }

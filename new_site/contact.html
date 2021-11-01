@@ -786,8 +786,21 @@
         <input name="phone" placeholder="Patient’s Phone*" required="true" type="tel" />
         <textarea name="reason" placeholder="Reason for Referral*" required="true"></textarea>
         <textarea name="treatments" placeholder="Description of Previous Treatments*" required="true"></textarea>
-        <p> <small>*Required Fields</small></p>
-        <button class="btn">Submit</button>
+        <select name="patient">
+            <option value="" disabled selected hidden>Are you a...</option>
+            <option value="New Patient">New Patient</option>
+            <option value="Existing Patient">Exisiting Patient</option>
+          </select>
+          <select name="patient">
+            <option value="" disabled selected hidden>How Did You Hear About Us?</option>
+            <option value="Search Engine">Search Engine</option>
+            <option value="Family/Friend">Family/Friend</option>
+            <option value="Promotion">Promotion</option>
+            <option value="Social Media">Social Media</option>
+            <option value="">Other</option>
+          </select>
+         <button class="btn-wh">Send Me Helpful Answers</button>
+        <button class="btn" type="submit">Submit</button>
         <input name="_subject" type="hidden" value="Refer a Patient" />
         <input name="_redirect" type="hidden" value="thanks.html" />
      </form>

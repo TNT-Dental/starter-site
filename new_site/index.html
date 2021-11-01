@@ -183,8 +183,22 @@
                     <input name="Name" placeholder="Name" required="true" type="text" />
                     <input name="Phone" placeholder="Phone Number" type="text" />
                     <input name="email" placeholder="Email Address" required="true" type="email" />
+                    <select name="patient">
+                        <option value="" disabled selected hidden>Are you a...</option>
+                        <option value="New Patient">New Patient</option>
+                        <option value="Existing Patient">Exisiting Patient</option>
+                      </select>
+                      <select name="patient">
+                        <option value="" disabled selected hidden>How Did You Hear About Us?</option>
+                        <option value="Search Engine">Search Engine</option>
+                        <option value="Family/Friend">Family/Friend</option>
+                        <option value="Promotion">Promotion</option>
+                        <option value="Social Media">Social Media</option>
+                        <option value="">Other</option>
+                      </select>
+    
                     <textarea name="question" placeholder="Questions/Comments"></textarea>
-                    <button class="btn">Send</button>
+                    <button class="btn" type="submit">Send</button>
                     <input name="_subject" value="Special Offer" type="hidden" />
                     <input name="_redirect" value="thanks.html" type="hidden" />
                 </form>
@@ -203,8 +217,27 @@
                                 <div class="input"><input name="Phone" placeholder="Phone Number" type="text" maxlength="14"/><button class="next" type="button">Next </button></div>
                                 <div class="input"><input name="email" placeholder="Email Address" required="true" type="email" /><button class="next" type="button">Next </button></div>
                                 <div class="input">
+                                    <select name="patient">
+                                        <option value="" disabled selected hidden>Are you a...</option>
+                                        <option value="New Patient">New Patient</option>
+                                        <option value="Existing Patient">Exisiting Patient</option>
+                                      </select>
+                                      <button class="next" type="button">Next </button>
+                                </div>
+                                <div class="input">
+                                    <select name="patient">
+                                        <option value="" disabled selected hidden>How Did You Hear About Us?</option>
+                                        <option value="Search Engine">Search Engine</option>
+                                        <option value="Family/Friend">Family/Friend</option>
+                                        <option value="Promotion">Promotion</option>
+                                        <option value="Social Media">Social Media</option>
+                                        <option value="">Other</option>
+                                      </select>
+                                      <button class="next" type="button">Next </button>
+                                </div>
+                                <div class="input">
                                     <textarea name="question" class="fields" placeholder="Questions/Comments" autocomplete="off"></textarea>	
-                                    <button class="next btn-thr"  type="submit">Submit</button>
+                                    <button class="next btn-thr" type="submit">Submit</button>
                                 </div>
                             </div>
                             <input name="_subject" value="Ask Question Footer Form" type="hidden" />
@@ -258,8 +291,8 @@
     </div>
 
 
-    <div id="copy">&copy; <span id="copyDate"></span> ****** <span>|</span> <a href="sitemap.html">Sitemap</a>  <span>|</span>
-        <a href="privacy-policy.html">Privacy Policy</a>  <span>|</span>   <a href="https://www.tntdental.com" target="_blank">Site designed and maintained by <img src="assets/images/tntlogo.png" alt=""></a>
+    <div id="copy">&copy; <em id="copyDate"></em> ****** <span>|</span> <a href="sitemap.html">Sitemap</a>  <span>|</span>
+        <a href="privacy-policy.html" class="tnt">Privacy Policy</a>  <span>|</span>   <a href="https://www.tntdental.com" target="_blank">Site designed and maintained by <i class="icon-tnt"></i></a>
     </div>
 
 </footer>
@@ -270,7 +303,7 @@
         <span><i class="icon-calendar-1"></i> </span>
         <span>Request<strong> an Appointment</strong></span>
     </a></li>
-    <li class="call"><a href="tel:+1">
+    <li class="call"><a href="">
         <span><i class="icon-phone"></i></span>
         <span>Call <strong>Us</strong></span>
     </a></li>

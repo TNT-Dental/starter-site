@@ -3,7 +3,7 @@
 #quest { padding: 10px 20px;; flex: 0 1 420px;
     .slick-form { margin: 10px 0; max-width: 420px;}
     .input {display: flex !important; width: 100%;}
-    .forms input, .forms textarea {
+    .forms input, .forms textarea, .forms select {
         flex:1; height: 50px; width: 100%;
         background: transparent; padding: 10px;
         font-size: 16px; border: none; background-color: #ebebeb;
@@ -11,16 +11,16 @@
       }
       .forms textarea {padding-top: 15px;}
 
-    .next {color: #fff; background-color: $secondary; min-width: 100px; position: relative; left: auto;  right: auto; top: auto; margin: 0;  font-size: 16px; font-family: $font; border: none; display: flex;justify-content: center; align-items: center; transform: none; text-transform: uppercase; border-radius: 0; padding: 0; height: auto;
+    .next {color: #fff; background-color: $secondary; min-width: 100px; position: relative; left: auto;  right: auto; top: auto; margin: 0;  font-size: 16px; font-family: $font; border: none; display: flex;justify-content: center; align-items: center; flex-direction: row; transform: none; text-transform: uppercase; border-radius: 0; padding: 0; height: auto;
         &:after {display: none;}
         &:hover {background-color: $primary; border-color: $primary;}
     }
-
+    .slick-dots {text-align: left; margin: 10px 0 10px -10px;}
     ::placeholder {color: #2b2d2f;}
     ::-webkit-input-placeholder { color: #2b2d2f;}
 }
 
-#map {position: relative; margin: 0; flex: 0 1 50%; min-height: 400px;
+#map {position: relative; margin: 0; flex: 0 1 50%; height: 400px;
     iframe {height: 100%; width: 100%; border: none; display: block; }
 }
 
@@ -31,9 +31,9 @@
 
 /* --------------- Simple Form ---------------- */
 .simple {line-height: 1; font-size: 0; margin: 0 auto; text-align: center;
-    input, textarea  {-webkit-box-sizing: border-box!important;box-sizing: border-box!important; border: 0; border-radius: 0; line-height: 1; font-size: 18px; width:100%; max-width: 100%; padding: 0 11px; margin-bottom: 10px; height: 45px; color: $primary; background-color: #eee; }
+    input, textarea, select  {-webkit-box-sizing: border-box!important;box-sizing: border-box!important; border: 0; border-radius: 0; line-height: 1; font-size: 18px; width:100%; max-width: 100%; padding: 0 11px; margin-bottom: 10px; height: 45px; color: $text; background-color: #eee; }
     textarea {height: 130px; padding: 14px 11px;}
-    input:focus, textarea:focus {outline: 0; background-color: #e7f0f6; color: $primary;}
+    input:focus, textarea:focus, select:focus {outline: 0; background-color: #e7f0f6; color: $primary;}
 }
 ::placeholder {color: $text}
 ::-webkit-input-placeholder {color: $text }
@@ -75,9 +75,10 @@ footer { background-color: #16191a; color: #fff;
 .fo-info {flex: 0 1 auto;}
 
 #copy { font: 400 15px/1.5 $font; color: #fff;  padding: 20px 10px; text-align: center;
+    em {font-style: normal;}
     a {color: #fff;
         &:nth-of-type(1), &:nth-of-type(2) {color:  $secondary; }
         &:hover  {color: $primary;}
     }
-    img {display: inline-block; vertical-align: middle; margin: 0 0 5px 5px;}
+    .icon-tnt{display: inline-block; vertical-align: middle; margin: 0 20px 10px -12px; font-size: 70px;}
 }

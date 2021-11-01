@@ -54,9 +54,9 @@ main {overflow: hidden}
         &:hover {
             h2, h3,  .h2, .h3 {color: $secondary}
         }
-        &.active:after  {content: '+'; top: 10px; font-size: 2em; padding-bottom: 2px;}
+        &.active:after  {content: '\2014'; top: 10px; }
     }
-    .toggle:after{content: '\2014'; position: absolute; top: 13px; right: 0; font-size: 24px;width: 50px; text-align: center;width: 43px; height: 43px; color: $text; border: 1px solid $text; background-color: #fff; border-radius: 50%; display: flex;align-items: center; justify-content: center;}
+    .toggle:after{content: '+'; position: absolute; top: 13px; right: 0; font-size: 24px;width: 50px; text-align: center;width: 43px; height: 43px; color: $text; border: 1px solid $text; background-color: #fff; border-radius: 50%; display: flex;align-items: center; justify-content: center;}
     > div {display:none; padding:0 50px 20px 0;
         p:first-of-type {margin-top: 0;}
     }

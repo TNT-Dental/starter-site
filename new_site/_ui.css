@@ -107,17 +107,17 @@ star:before {content: '\e80f \e80f \e80f \e80f \e80f'; color: #f4bd17;}
 
 /*==================== 6. Modals ================*/
 #lean_overlay {padding: 10px; position: fixed; z-index:1100; top: 0; left: 0; height:100%; width:100%; background: rgba(0,0,0,.9); display: none; -webkit-box-pack:center; -ms-flex-pack:center; justify-content:center; -webkit-box-align:center; -webkit-align-items:center; -ms-flex-align:center; -ms-grid-row-align:center; align-items:center; overflow: scroll; }
-.modal-content { display: none; -webkit-box-flex: 0;-ms-flex: 0 1 97%;flex: 0 1 97%; background: rgb(237, 237, 237); max-width: 900px;-webkit-box-sizing: border-box; box-sizing: border-box; position: relative;text-align: center;  width: 95%;  max-height: calc(100vh - 80px);overflow-y: scroll;}
+.modal-content { display: none; -webkit-box-flex: 0;-ms-flex: 0 1 97%;flex: 0 1 97%; background: rgb(237, 237, 237); max-width: 900px;-webkit-box-sizing: border-box; box-sizing: border-box; position: relative;text-align: center; padding: 30px 20px; width: 95%;   max-height: calc(100vh - 80px);overflow: auto;}
 .modal-content[data-player] img {width: 100%;}
-.modal-close { position: absolute; right:0; top:0px; z-index:102; cursor:pointer; width: 40px; height: 40px; display: flex; align-items: center;justify-content: center; text-align: center; font-size: 40px; line-height: auto; }
-.modal-close i { position: relative; color:#555; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; font-style: normal;    margin-bottom: 5px;}
-.modal-close i:before {  content: '\00d7'}
+.modal-content[data-player] {padding: 0;}
+.modal-content[data-player] .modal-close svg * {stroke: #fff; stroke-width: 2;}
+.modal-close { position: absolute; right:0; top:0px; z-index:102; cursor:pointer; width: 40px; height: 40px; display: flex; align-items: center;justify-content: center; text-align: center; font-size: 40px; line-height: 1; }
 .modal-close span {display: none;}
 .modal-close:hover {background-color: #d10a0a;}
 .modal-close:hover svg * { stroke: #fff; stroke-width:2;}
 .modal-content.playing .modal-close {    width: 180px; opacity: 0;}
 .modal-content form {margin: 20px auto;}
-.modal-content input, .modal-content textarea { display: block; width: 100%; -webkit-box-sizing: border-box; box-sizing: border-box;border: none; padding: 12px 10px; font-size: 17px; margin-bottom: 10px; color: inherit;line-height: 1em; -webkit-transition:.3s ease all; transition: .3s ease all;    -webkit-box-shadow: 1.5px 2.6px 7px rgba(24, 23, 24, 0.25);    box-shadow: 1.5px 2.6px 7px rgba(24, 23, 24, 0.25); }
+.modal-content input, .modal-content textarea, .modal-content select { display: block; width: 100%; -webkit-box-sizing: border-box; box-sizing: border-box;border: none; padding: 12px 10px; color: #363636; font-size: 17px; margin-bottom: 10px; color: inherit;line-height: 1em; -webkit-transition:.3s ease all; transition: .3s ease all;    -webkit-box-shadow: 1.5px 2.6px 7px rgba(24, 23, 24, 0.25);    box-shadow: 1.5px 2.6px 7px rgba(24, 23, 24, 0.25); }
 .modal-content textarea {height: 120px;}
 .modal-content .btn {display: table; margin: 20px auto;}
 .modal-content ::-webkit-input-placeholder {color: #363636}
@@ -164,8 +164,8 @@ star:before {content: '\e80f \e80f \e80f \e80f \e80f'; color: #f4bd17;}
 
 /*========== 10. Anchor Header Height & IE Fixes ========*/
 /*   Media Queries   */
-@media (min-width:10250px) {a[name]:before {height: 120px; margin-top: -120px; display: block; content: ""; visibility: hidden;}}
-@media (max-width:10250px) {a[name]:before {height: 90px; margin-top: -90px; display: block; content: ""; visibility: hidden;}}
+@media (min-width:1025px) {a[name]:before {height: 120px; margin-top: -120px; display: block; content: ""; visibility: hidden;}}
+@media (max-width:1025px) {a[name]:before {height: 90px; margin-top: -90px; display: block; content: ""; visibility: hidden;}}
 @media (max-width:590px) {a[name]:before {height: 90px; margin-top: -90px; display: block; content: ""; visibility: hidden;}}
 /*   Firefox  Only */
 @-moz-document url-prefix() {  }
